@@ -91,7 +91,7 @@ if (isset($_POST['login'])) {
         <div class="container">
             <!-- Logo container-->
             <div>
-                <a class="logo" href="https://cheetahmileslogistics.com/"><?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '"  width="150" height="45"/>' : $core->site_name; ?></a>
+                <a class="logo" href="../"><?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '"  width="150"/>' : $core->site_name; ?></a>
             </div>
             <div class="buy-button">
                 <a href="sign-up.php" class="btn btn-light-outline rounded"><i class="mdi mdi-account-alert ml-3 icons"></i> <?php echo $lang['left112'] ?></a>
@@ -113,7 +113,7 @@ if (isset($_POST['login'])) {
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
-                    <li><a href="https://cheetahmileslogistics.com/"><?php echo $lang['left111'] ?></a></li>
+                    <li><a href="../"><?php echo $lang['left111'] ?></a></li>
 
                     <li><a href="tracking.php"><i class="mdi mdi-package-variant-closed"></i> <?php echo $lang['left113'] ?></a></li>
                 </ul>
