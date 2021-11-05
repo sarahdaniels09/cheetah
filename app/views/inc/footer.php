@@ -32,6 +32,7 @@
         <script src="assets/extra-libs/c3/d3.min.js"></script>
         <script src="assets/extra-libs/c3/c3.min.js"></script>
         <!--chartjs -->
+
         <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
