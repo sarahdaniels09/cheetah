@@ -117,7 +117,6 @@ if (isset($_POST['login'])) {
 
                     <li><a href="tracking.php"><i class="mdi mdi-package-variant-closed"></i> <?php echo $lang['left113'] ?></a></li>
                 </ul>
-                <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=true" type="text/javascript"></script>
 
             </div>
         </div>
