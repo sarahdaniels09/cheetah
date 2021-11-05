@@ -20,7 +20,7 @@
 // *************************************************************************
 
 
-$userData = $user->getUserData(); 
+$userData = $user->getUserData();
 
 $db = new Conexion;
 
@@ -39,13 +39,13 @@ $db = new Conexion;
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/<?php echo $core->favicon ?>">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <title></title>
     <!-- Custom CSS -->
     <link href="assets/css/style.min.css" rel="stylesheet">
-    
-    <link href="assets/css_log/front.css" rel="stylesheet" type="text/css"> 
+
+    <link href="assets/css_log/front.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
     <script src="assets/js/jquery.ui.touch-punch.js"></script>
@@ -56,21 +56,21 @@ $db = new Conexion;
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
-    });
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 
     <style type="text/css">
-        .alert{
-            margin-top:20px;
+        .alert {
+            margin-top: 20px;
         }
 
         * {
-          box-sizing: border-box;
+            box-sizing: border-box;
         }
     </style>
-     
+
 </head>
 
 <body>
@@ -79,22 +79,22 @@ $db = new Conexion;
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
-        
+
         <?php include 'views/inc/preloader.php'; ?>
-        
+
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
-        
+
         <?php include 'views/inc/topbar.php'; ?>
-        
+
         <!-- End Topbar header -->
 
-        
+
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
- 
+
         <?php include 'views/inc/left_sidebar.php'; ?>
-        
+
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
 
@@ -115,124 +115,94 @@ $db = new Conexion;
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-             <div class="container-fluid">
-                            
+            <div class="container-fluid">
+
                 <!-- ============================================================== -->
                 <!-- Earnings, Sale Locations -->
                 <!-- ============================================================== -->
                 <div class="row">
-                        <!-- column -->
+                    <!-- column -->
 
 
-                        <div class="col-sm-12 col-md-5 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-body border-bottom">
-                                        <h5 class="card-title"><?php echo $lang['dashnew01'] ?></h5>
-                                        <!-- <h5 class="card-subtitle">Indicadores de usuarios</h5> -->
-                                    </div>
-                                    
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <div class="m-r-10"><a href="users_list.php"><span class="display-5"><i class="mdi mdi-account-settings-variant" style="color: #36bea6;"></i></span></a></div>
-                                            <div>
-                                                <span class="text-muted"><?php echo $lang['dashnew02'] ?></span>
-                                                <h3 class="font-medium m-b-0">
-                                                    <?php 
-
-                                                    $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=9');
-
-                                                    $db->execute();
-
-                                                    $count = $db->registro();
-
-                                                    echo $count->total;
-                                                    ?>
-                                                </h3>
-                                            </div>
-                                                
-                                        </div>
-                                    </div>
-
-                                     <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <div class="m-r-10"><a href="users_list.php"><span class="display-5"><i class="mdi mdi-account-settings" style="color: #fb8c00;"></i></span></a></div>
-                                            <div><span class="text-muted" ><?php echo $lang['dashnew03'] ?></span>
-                                                <h3 class="font-medium m-b-0">
-                                                    <?php 
-
-                                                    $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=2');
-
-                                                    $db->execute();
-
-                                                    $count = $db->registro();
-
-                                                    echo $count->total;
-                                                    ?>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                     <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <div class="m-r-10"><a href="drivers_list.php"><span class="display-5"><i class="mdi mdi-account-star-variant" style="color: #7460ee;"></i></span></a></div>
-                                            <div><span class="text-muted"><?php echo $lang['dashnew04'] ?></span>
-                                                <h3 class="font-medium m-b-0">
-                                                    <?php 
-
-                                                    $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=3');
-
-                                                    $db->execute();
-
-                                                    $count = $db->registro();
-
-                                                    echo $count->total;
-                                                    ?>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <div class="m-r-10"><a href="customers_list.php"><span class="display-5"><i class="mdi mdi-account-check" style="color: #1f95ff;"></i></span></a></div>
-                                            <div><span class="text-muted"><?php echo $lang['dashnew05'] ?></span>
-                                                <h3 class="font-medium m-b-0">
-                                                    <?php 
-
-                                                    $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=1');
-
-                                                    $db->execute();
-
-                                                    $count = $db->registro();
-
-                                                    echo $count->total;
-                                                    ?>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- col -->
-
+                    <div class="col-sm-12 col-md-5 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-body border-bottom">
+                                    <h5 class="card-title"><?php echo $lang['dashnew01'] ?></h5>
+                                    <!-- <h5 class="card-subtitle">Indicadores de usuarios</h5> -->
                                 </div>
+
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="m-r-10"><a href="users_list.php"><span class="display-5"><i class="mdi mdi-account-settings-variant" style="color: #36bea6;"></i></span></a></div>
+                                        <div>
+                                            <span class="text-muted"><?php echo $lang['dashnew02'] ?></span>
+                                            <h3 class="font-medium m-b-0">
+                                                <?php
+
+                                                $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=9');
+
+                                                $db->execute();
+
+                                                $count = $db->registro();
+
+                                                echo $count->total;
+                                                ?>
+                                            </h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-md-6 col-sm-12 col-lg-6">
+                                       Employee
+                                    </div> -->
+
+
+                                <!-- <div class="col-md-6 col-sm-12 col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            Driver
+                                        </div>
+                                    </div> -->
+
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="m-r-10"><a href="customers_list.php"><span class="display-5"><i class="mdi mdi-account-check" style="color: #1f95ff;"></i></span></a></div>
+                                        <div><span class="text-muted"><?php echo $lang['dashnew05'] ?></span>
+                                            <h3 class="font-medium m-b-0">
+                                                <?php
+
+                                                $db->query('SELECT COUNT(*) as total FROM users WHERE userlevel=1');
+
+                                                $db->execute();
+
+                                                $count = $db->registro();
+
+                                                echo $count->total;
+                                                ?>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+
                             </div>
                         </div>
+                    </div>
 
 
-                        <!-- column -->
-                        <div class="col-sm-12 col-md-7 col-lg-9">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <!-- column -->
-                                        <div class="col-sm-12 col-md-6 col-lg-8">
+                    <!-- column -->
+                    <div class="col-sm-12 col-md-7 col-lg-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- column -->
+                                    <div class="col-sm-12 col-md-6 col-lg-8">
                                         <div class="card-body border-bottom">
                                             <h5 class="card-title"><?php echo $lang['dashnew06'] ?></h5>
                                             <!-- <h5 class="card-subtitle"></h5> -->
                                         </div>
-                                            
+
                                         <div class="row">
                                             <!-- col -->
                                             <div class="col-lg-6 col-md-6">
@@ -240,7 +210,7 @@ $db = new Conexion;
                                                     <div class="m-r-10"><a href="courier_list.php"><span class="text-orange display-5"><i class="mdi mdi-package-variant-closed"></i></span></a></div>
                                                     <div><span><?php echo $lang['dashnew07'] ?></span>
                                                         <h3 class="font-medium m-b-0">
-                                                            <?php 
+                                                            <?php
 
                                                             $db->query('SELECT COUNT(*) as total FROM add_order WHERE is_pickup=0');
 
@@ -261,7 +231,7 @@ $db = new Conexion;
                                                     <div class="m-r-10"><a href="pickup_list.php"><span class="text-cyan display-5"><i class="mdi mdi-star-circlemdi mdi-clock-fast"></i></span> </a></div>
                                                     <div><span><?php echo $lang['dashnew08'] ?></span>
                                                         <h3 class="font-medium m-b-0">
-                                                            <?php 
+                                                            <?php
 
                                                             $db->query('SELECT COUNT(*) as total FROM add_order WHERE is_pickup=1');
 
@@ -271,53 +241,25 @@ $db = new Conexion;
 
                                                             echo $count->total;
                                                             ?>
-                                                            
+
                                                         </h3>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- col -->
                                             <!-- col -->
-                                            <div class="col-lg-6 col-md-6">
+                                            <!-- <div class="col-lg-6 col-md-6">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a href="consolidate_list.php"><span class="text-danger display-5"><i class="mdi mdi-gift"></i></span></a></div>
-                                                    <div><span><?php echo $lang['dashnew09'] ?></span>
-                                                        <h3 class="font-medium m-b-0">
-                                                            <?php 
-
-                                                            $db->query('SELECT COUNT(*) as total FROM consolidate');
-
-                                                            $db->execute();
-
-                                                            $count = $db->registro();
-
-                                                            echo $count->total;
-                                                            ?>
-                                                        </h3>
-                                                    </div>
+                                                   consolidate
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- col -->
                                             <!-- col -->
-                                            <div class="col-lg-6 col-md-6">
+                                            <!-- <div class="col-lg-6 col-md-6">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a href="accounts_receivable.php"><span class="text-primary display-5"><i class="mdi mdi-package-down"></i></span></a></div>
-                                                    <div><span><?php echo $lang['dashnew10'] ?></span>
-                                                        <h3 class="font-medium m-b-0">
-                                                            <?php 
-
-                                                            $db->query('SELECT COUNT(*) as total FROM add_order WHERE order_payment_method >1');
-
-                                                            $db->execute();
-
-                                                            $count = $db->registro();
-
-                                                            echo $count->total;
-                                                            ?>
-                                                        </h3>
-                                                    </div>
+                                                   account Recievable
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- col -->
 
                                             <!-- col -->
@@ -326,7 +268,7 @@ $db = new Conexion;
                                                     <div class="m-r-10"><a href="prealert_list.php"><span class="text-warning display-5"><i class="mdi mdi-clock-alert"></i></span></a></div>
                                                     <div><span><?php echo $lang['dashnew11'] ?></span>
                                                         <h3 class="font-medium m-b-0">
-                                                            <?php 
+                                                            <?php
 
                                                             $db->query('SELECT COUNT(*) as total FROM pre_alert');
 
@@ -348,7 +290,7 @@ $db = new Conexion;
                                                     <div class="m-r-10"><a href="customer_packages_list.php"><span class="text-success display-5"><i class="fas fa-cube"></i></span></a></div>
                                                     <div><span><?php echo $lang['dashnew12'] ?></span>
                                                         <h3 class="font-medium m-b-0">
-                                                            <?php 
+                                                            <?php
 
                                                             $db->query('SELECT COUNT(*) as total FROM customers_packages');
 
@@ -364,56 +306,22 @@ $db = new Conexion;
                                             </div>
                                             <!-- col -->
 
-                                             <div class="col-md-6 col-sm-12 col-lg-6">
+                                            <!--  <div class="col-md-6 col-sm-12 col-lg-6">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><span class="text-primary display-5"><i class="mdi mdi-basket"></i></span></div>
-                                                    <div><span class="text-muted"><?php echo $lang['dashnew13'] ?></span>
-                                                        <h3 class="font-medium m-b-0"><?php echo $core->currency;?>
-
-                                                            <?php 
-
-                                                            $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM customers_packages WHERE status_courier!=21');
-
-                                                            $db->execute();
-
-                                                            $count = $db->registro();
-
-                                                            echo number_format($count->total, 2,'.','');
-                                                           
-                                                            ?>
-
-
-                                                        </h3></div>
+                                                    Total Packages
                                                 </div>
-                                            </div>
+                                            </div> -->
 
-                                            <div class="col-md-6 col-sm-12 col-lg-6">
+                                            <!--  <div class="col-md-6 col-sm-12 col-lg-6">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><span class="text-orange display-5"><i class="mdi mdi-wallet"></i></span></div>
-                                                            <div><span class="text-muted"><?php echo $lang['dashnew14'] ?></span>
-                                                                <h3 class="font-medium m-b-0"><?php echo $core->currency;?>
-
-                                                                    <?php 
-
-                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and  status_invoice!=0 and order_payment_method>1');
-
-                                                                    $db->execute();
-
-                                                                    $count = $db->registro();
-
-                                                                    echo number_format($count->total, 2,'.','');
-                                                                    ?>
-
-
-                                                                </h3></div>
-                                                        </div>
+                                                            Accounts Recievable
                                                     </div>
 
-                                        </div>
+                                        </div> -->
 
 
 
-                                           
+
 
                                         </div>
                                         <!-- column -->
@@ -427,26 +335,26 @@ $db = new Conexion;
                                                     <div class="d-flex align-items-center">
                                                         <div>
                                                             <span class="text-muted"><?php echo $lang['dashnew16'] ?></span>
-                                                            <h4 class="m-b-0"> 
+                                                            <h4 class="m-b-0">
                                                                 <span class="font-16">
-                                                                   <?php echo $core->currency;?> <?php 
+                                                                    <?php echo $core->currency; ?> <?php
 
-                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and is_pickup=0');
+                                                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and is_pickup=0');
 
-                                                                    $db->execute();
+                                                                                                    $db->execute();
 
-                                                                    $count = $db->registro();
+                                                                                                    $count = $db->registro();
 
-                                                                    echo number_format($count->total, 2,'.','');
-                                                                    
-                                                                    ?>
+                                                                                                    echo number_format($count->total, 2, '.', '');
+
+                                                                                                    ?>
                                                                 </span>
 
                                                             </h4>
                                                         </div>
                                                     </div>
                                                     <div class="progress m-t-10">
-                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: <?php  echo number_format($count->total, 2,'.','')/100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo number_format($count->total, 2, '.', '') / 100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </li>
                                                 <li class="m-t-30">
@@ -455,58 +363,58 @@ $db = new Conexion;
                                                             <span class="text-muted"><?php echo $lang['dashnew17'] ?></span>
                                                             <h4 class="m-b-0">
                                                                 <span class="font-16">
-                                                                    <?php echo $core->currency;?> <?php 
+                                                                    <?php echo $core->currency; ?> <?php
 
-                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and is_pickup=1');
+                                                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and is_pickup=1');
 
-                                                                    $db->execute();
+                                                                                                    $db->execute();
 
-                                                                    $count = $db->registro();
+                                                                                                    $count = $db->registro();
 
-                                                                    echo number_format($count->total, 2,'.','');
-                                                                   
-                                                                    ?>
+                                                                                                    echo number_format($count->total, 2, '.', '');
+
+                                                                                                    ?>
                                                                 </span>
                                                             </h4>
                                                         </div>
                                                     </div>
                                                     <div class="progress m-t-10">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: <?php  echo number_format($count->total, 2,'.','')/100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo number_format($count->total, 2, '.', '') / 100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </li>
                                                 <li class="m-t-30 m-b-40">
                                                     <div class="d-flex align-items-center">
                                                         <div>
                                                             <span class="text-muted"><?php echo $lang['dashnew18'] ?></span>
-                                                            <h4 class="m-b-0"> 
+                                                            <h4 class="m-b-0">
                                                                 <span class="font-16">
-                                                                    <?php echo $core->currency;?> <?php 
+                                                                    <?php echo $core->currency; ?> <?php
 
-                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM consolidate WHERE status_courier!=21');
+                                                                                                    $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM consolidate WHERE status_courier!=21');
 
-                                                                    $db->execute();
+                                                                                                    $db->execute();
 
-                                                                    $count = $db->registro();
+                                                                                                    $count = $db->registro();
 
-                                                                    echo number_format($count->total, 2,'.','');
-                                                                   
-                                                                    ?>
+                                                                                                    echo number_format($count->total, 2, '.', '');
+
+                                                                                                    ?>
                                                                 </span>
                                                             </h4>
                                                         </div>
                                                     </div>
                                                     <div class="progress m-t-10">
-                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?php  echo number_format($count->total, 2,'.','')/100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo number_format($count->total, 2, '.', '') / 100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </li>
 
-                                             <!--    <li class="m-t-30">
+                                                <!--    <li class="m-t-30">
                                                     <div class="d-flex align-items-center">
                                                         <div>
                                                             <span class="text-muted">Total Accounts receivable</span>
                                                             <h4 class="m-b-0">
                                                                 <span class="font-16">
-                                                                    <?php 
+                                                                    <?php
 
                                                                     $db->query('SELECT IFNULL(SUM(total_order),0) as total FROM add_order where status_courier!=21 and  status_invoice!=0 and order_payment_method>1');
 
@@ -514,18 +422,18 @@ $db = new Conexion;
 
                                                                     $count = $db->registro();
 
-                                                                    echo number_format($count->total, 2,'.','');
+                                                                    echo number_format($count->total, 2, '.', '');
                                                                     ?>
                                                                 </span>
                                                             </h4>
                                                         </div>
                                                     </div>
                                                     <div class="progress m-t-10">
-                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?php  echo number_format($count->total, 2,'.','')/100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo number_format($count->total, 2, '.', '') / 100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </li> -->
 
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -545,66 +453,66 @@ $db = new Conexion;
                             <div class="card">
                                 <div class="card-body">
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                      <li class="nav-item">
-                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-shipment" role="tab" aria-controls="pills-shipment" aria-selected="true"><?php echo $lang['dashnew19'] ?></a>
-                                      </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-shipment" role="tab" aria-controls="pills-shipment" aria-selected="true"><?php echo $lang['dashnew19'] ?></a>
+                                        </li>
 
-                                      <li class="nav-item">
-                                        <a class="nav-link" id="pills-profile-tab" href="pickup_list.php"><?php echo $lang['dashnew20'] ?></a>
-                                      </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" href="pickup_list.php"><?php echo $lang['dashnew20'] ?></a>
+                                        </li>
 
-                                       <li class="nav-item">
-                                        <a class="nav-link" id="pills-profile-tab" href="consolidate_list.php"><?php echo $lang['dashnew21'] ?></a>
-                                      </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" href="consolidate_list.php"><?php echo $lang['dashnew21'] ?></a>
+                                        </li>
 
-                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-profile-tab" href="prealert_list.php"><?php echo $lang['dashnew22'] ?></a>
-                                      </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" href="prealert_list.php"><?php echo $lang['dashnew22'] ?></a>
+                                        </li>
 
-                                       <li class="nav-item">
-                                        <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php"><?php echo $lang['dashnew23'] ?></a>
-                                      </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php"><?php echo $lang['dashnew23'] ?></a>
+                                        </li>
 
-                                      
+
                                     </ul>
                                     <div class="tab-content" id="pills-tabContent">
-                                      <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel" aria-labelledby="pills-home-tab">
 
-                                        <div class="col-md-4 mt-4 mb-4">
-                                             <div class="input-group">
-                                                <input type="text" name="search_shipment" id="search_shipment" class="form-control input-sm float-right" placeholder="search tracking"  onkeyup="load(1);">
-                                                <div class="input-group-append input-sm">
-                                                    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                            <div class="col-md-4 mt-4 mb-4">
+                                                <div class="input-group">
+                                                    <input type="text" name="search_shipment" id="search_shipment" class="form-control input-sm float-right" placeholder="search tracking" onkeyup="load(1);">
+                                                    <div class="input-group-append input-sm">
+                                                        <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                                    </div>
                                                 </div>
-                                             </div>
-                                        </div>
+                                            </div>
 
-                                          <div class="results_shipments"></div>
-                                      </div>
-                                      <div class="tab-pane fade" id="pills-pickup" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="results_shipments"></div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-pickup" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-                                        <div class="col-md-4 mt-4 mb-4">
-                                             <div class="input-group">
-                                                <input type="text" name="search_pickup" id="search_pickup" class="form-control input-sm float-right" placeholder="search tracking"  onkeyup="load(1);">
-                                                <div class="input-group-append input-sm">
-                                                    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                            <div class="col-md-4 mt-4 mb-4">
+                                                <div class="input-group">
+                                                    <input type="text" name="search_pickup" id="search_pickup" class="form-control input-sm float-right" placeholder="search tracking" onkeyup="load(1);">
+                                                    <div class="input-group-append input-sm">
+                                                        <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                                    </div>
                                                 </div>
-                                             </div>
+                                            </div>
+                                            <div class="results_pickup"></div>
+
                                         </div>
-                                          <div class="results_pickup"></div>
-                                          
-                                      </div>
-                                      <div class="tab-pane fade" id="pills-consolidated" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                        <div class="col-md-4 mt-4 mb-4">
-                                             <div class="input-group">
-                                                <input type="text" name="search_consolidated" id="search_consolidated" class="form-control input-sm float-right" placeholder="search tracking"  onkeyup="load(1);">
-                                                <div class="input-group-append input-sm">
-                                                    <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                        <div class="tab-pane fade" id="pills-consolidated" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                            <div class="col-md-4 mt-4 mb-4">
+                                                <div class="input-group">
+                                                    <input type="text" name="search_consolidated" id="search_consolidated" class="form-control input-sm float-right" placeholder="search tracking" onkeyup="load(1);">
+                                                    <div class="input-group-append input-sm">
+                                                        <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+                                                    </div>
                                                 </div>
-                                             </div>
+                                            </div>
+                                            <div class="results_consolidated"></div>
                                         </div>
-                                          <div class="results_consolidated"></div>                                          
-                                      </div>
                                     </div>
                                 </div>
                             </div>
@@ -612,86 +520,85 @@ $db = new Conexion;
                     </div>
 
 
-                   
+
                 </div>
-               
+
             </div>
         </div>
     </div>
 
 
 
-<script>
+    <script>
+        $(document).ready(function() {
 
-$(document).ready(function() {
-
- load(1);
-
-
-});
+            load(1);
 
 
-//Cargar datos AJAX
-function load(page){
-    
+        });
 
-    var search= $('#search_shipment').val();
-    var parametros = {"page":page, "search":search};
-    $("#loader").fadeIn('slow');
-    $.ajax({
-        url:'./ajax/dashboard/shipments/load_shipments_ajax.php',
-        data: parametros,
-         beforeSend: function(objeto){
-        // $("#loader").html("<img src='./img/ajax-loader.gif'>");
-      },
-        success:function(data){
-            $(".results_shipments").html(data).fadeIn('slow');
-            // $("#loader").html("");
+
+        //Cargar datos AJAX
+        function load(page) {
+
+
+            var search = $('#search_shipment').val();
+            var parametros = {
+                "page": page,
+                "search": search
+            };
+            $("#loader").fadeIn('slow');
+            $.ajax({
+                url: './ajax/dashboard/shipments/load_shipments_ajax.php',
+                data: parametros,
+                beforeSend: function(objeto) {
+                    // $("#loader").html("<img src='./img/ajax-loader.gif'>");
+                },
+                success: function(data) {
+                    $(".results_shipments").html(data).fadeIn('slow');
+                    // $("#loader").html("");
+                }
+            })
         }
-    })
-}
 
 
 
-// //Cargar datos AJAX
-// function loadPickup(page){
-    
-//     var search= $('#search_pickup').val();
-//     var parametros = {"page":page, "search":search};
-//     $.ajax({
-//         url:'./ajax/dashboard/pickup/load_pickup_ajax.php',
-//         data: parametros,
-//          beforeSend: function(objeto){
-//         // $("#loader").html("<img src='./img/ajax-loader.gif'>");
-//       },
-//         success:function(data){
-//             $(".results_pickup").html(data).fadeIn('slow');
-//             // $("#loader").html("");
-//         }
-//     })
-// }
+        // //Cargar datos AJAX
+        // function loadPickup(page){
+
+        //     var search= $('#search_pickup').val();
+        //     var parametros = {"page":page, "search":search};
+        //     $.ajax({
+        //         url:'./ajax/dashboard/pickup/load_pickup_ajax.php',
+        //         data: parametros,
+        //          beforeSend: function(objeto){
+        //         // $("#loader").html("<img src='./img/ajax-loader.gif'>");
+        //       },
+        //         success:function(data){
+        //             $(".results_pickup").html(data).fadeIn('slow');
+        //             // $("#loader").html("");
+        //         }
+        //     })
+        // }
 
 
-// function loadConsolidated(page){
-    
-//     var search= $('#search_consolidated').val();
-//     var parametros = {"page":page, "search":search};
-//     $("#loader").fadeIn('slow');
-//     $.ajax({
-//         url:'./ajax/dashboard/consolidated/load_consolidated_ajax.php',
-//         data: parametros,
-//          beforeSend: function(objeto){
-//         // $("#loader").html("<img src='./img/ajax-loader.gif'>");
-//       },
-//         success:function(data){
-//             $(".results_consolidated").html(data).fadeIn('slow');
-//             // $("#loader").html("");
-//         }
-//     })
-// }
+        // function loadConsolidated(page){
 
-   
-</script>
-       
- <?php include 'views/inc/footer.php'; ?>
-          
+        //     var search= $('#search_consolidated').val();
+        //     var parametros = {"page":page, "search":search};
+        //     $("#loader").fadeIn('slow');
+        //     $.ajax({
+        //         url:'./ajax/dashboard/consolidated/load_consolidated_ajax.php',
+        //         data: parametros,
+        //          beforeSend: function(objeto){
+        //         // $("#loader").html("<img src='./img/ajax-loader.gif'>");
+        //       },
+        //         success:function(data){
+        //             $(".results_consolidated").html(data).fadeIn('slow');
+        //             // $("#loader").html("");
+        //         }
+        //     })
+        // }
+    </script>
+
+    <?php include 'views/inc/footer.php'; ?>
