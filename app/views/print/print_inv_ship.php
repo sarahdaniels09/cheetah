@@ -400,15 +400,15 @@ $address_order = $db->registro();
                 <td style="border: 0;  text-align: left" width="18%">
                     <div id="logo">
 
-                        Address: 735 E Quinlan Pkwy, </br>
+                        735 E Quinlan Pkwy, </br>
                         Quinlan, TX 75474, </br>
                         United States</br>
-                        Phone: +1 (903)-623-5667 </br>
-                        Email: support@cheetahmileslogistics.com</br>
+                        +1 (903)-623-5667 </br>
+                        support@cheetahmileslogistics.com</br>
 
                 </td>
                 <td style="border: 0;  text-align: center" width="56%">
-                    <img src="../../assets/images/lg.jpg" alt="" width="150px" />
+                    <img src="../../assets/images/lg.jpeg" alt="" width="150px" />
 
                 </td>
                 <td style="border: 0;  text-align: center" width="48%">
