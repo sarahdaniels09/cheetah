@@ -53,10 +53,6 @@ $receiver_data = $db->registro();
 $db->query("SELECT * FROM users where id= '" . $row->sender_id . "'");
 $sender_data = $db->registro();
 
-
-
-
-
 $db->query("SELECT * FROM address_shipments where order_track='" . $row->order_prefix . $row->order_no . "'");
 $address_order = $db->registro();
 
@@ -428,8 +424,8 @@ $address_order = $db->registro();
                     <strong><?php echo $lang['inv-shipping5'] ?></strong> </br>
                     <table id="items">
                         <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
-                        <?php echo $receiver_data->receiver_address; ?> </br>
-                        <?php echo $receiver_data->receiver_country . " | " . $receiver_data->receiver_city; ?> </br>
+                        <?php echo $address_order_data->recipient_address; ?> </br>
+                        <?php echo $address_order->recipient_country . " | " . $address_order->recipient_city; ?> </br>
                         <?php echo $receiver_data->phone; ?> </br>
                         <?php echo $receiver_data->email; ?>
                     </table>
