@@ -408,7 +408,8 @@ $address_order = $db->registro();
 
                 </td>
                 <td style="border: 0;  text-align: center" width="56%">
-                    <img src="../../assets/images/lg.jpg" alt="Logo" width="150px" />
+                    <?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '" width="150" />' : $core->site_name; ?>
+
 
                 </td>
                 <td style="border: 0;  text-align: center" width="48%">
