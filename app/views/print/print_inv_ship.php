@@ -408,7 +408,7 @@ $address_order = $db->registro();
 
                 </td>
                 <td style="border: 0;  text-align: center" width="56%">
-                    <img src="../../assets/images/lg.jpg" alt="" width="150px" />
+                    <img src="../../assets/images/lg.jpg" alt="Logo" width="150px" />
 
                 </td>
                 <td style="border: 0;  text-align: center" width="48%">
