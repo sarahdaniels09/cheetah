@@ -427,11 +427,11 @@ $address_order = $db->registro();
                 <td rowspan="5" style="border: 1px solid white; border-right: 1px solid black; text-align: left" width="62%">
                     <strong><?php echo $lang['inv-shipping5'] ?></strong> </br>
                     <table id="items">
-                        <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></br> </br>
-                        <?php echo $address_order->sender_address; ?> </br>
-                        <?php echo $address_order->sender_country . " | " . $address_order->sender_city; ?> </br>
-                        <?php echo $sender_data->phone; ?> </br>
-                        <?php echo $sender_data->email; ?>
+                        <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
+                        <?php echo $address_order->receiver_address; ?> </br>
+                        <?php echo $address_order->receiver_country . " | " . $address_order->receiver_city; ?> </br>
+                        <?php echo $receiver_data->phone; ?> </br>
+                        <?php echo $receiver_data->email; ?>
                     </table>
                 </td>
                 <td class="meta-head">
