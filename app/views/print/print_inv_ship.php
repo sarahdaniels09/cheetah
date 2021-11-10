@@ -424,7 +424,7 @@ $address_order = $db->registro();
                     <strong><?php echo $lang['inv-shipping5'] ?></strong> </br>
                     <table id="items">
                         <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
-                        <?php echo $address_order_data->recipient_address; ?> </br>
+                        <?php echo $address_order->recipient_address; ?> </br>
                         <?php echo $address_order->recipient_country . " | " . $address_order->recipient_city; ?> </br>
                         <?php echo $receiver_data->phone; ?> </br>
                         <?php echo $receiver_data->email; ?>
