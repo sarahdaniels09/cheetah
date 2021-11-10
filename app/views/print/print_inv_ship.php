@@ -428,8 +428,8 @@ $address_order = $db->registro();
                     <strong><?php echo $lang['inv-shipping5'] ?></strong> </br>
                     <table id="items">
                         <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
-                        <?php echo $address_order->receiver_address; ?> </br>
-                        <?php echo $address_order->receiver_country . " | " . $address_order->receiver_city; ?> </br>
+                        <?php echo $receiver_data->receiver_address; ?> </br>
+                        <?php echo $receiver_data->receiver_country . " | " . $receiver_data->receiver_city; ?> </br>
                         <?php echo $receiver_data->phone; ?> </br>
                         <?php echo $receiver_data->email; ?>
                     </table>
