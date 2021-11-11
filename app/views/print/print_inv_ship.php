@@ -397,6 +397,7 @@ $address_order = $db->registro();
     <div id="page-wrap">
         <table width="100%">
             <tr>
+
                 <td style="border: 0;  text-align: left" width="18%">
                     <div id="logo">
 
