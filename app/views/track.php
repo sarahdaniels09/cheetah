@@ -387,6 +387,17 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-3">
 												<div class="trackstatus-title">
+
+													<a class="btn btn-success btn-sm  rounded" target="blank" href="print_inv_ship_track.php?id=<?php echo $track->order_id; ?>"><i style="color:white" class="ti-printer"></i>&nbsp;<?php echo $lang['toolprint'] ?></a>
+
+												</div>
+											</div>
+										</div>
+										<div class="row">
+
+
+											<div class="col-md-5">
+												<div class="trackstatus-title">
 													<p><span class="ti-package align-top" style="font-size: 30px;"></span>Current Status: <b><?php echo $track->mod_style; ?></b></p>
 													<label> </label>
 												</div>
@@ -397,13 +408,7 @@ if ($track != null) {
 												</div>
 											</div>
 
-											<div class="col-md-2">
-												<div class="trackstatus-title">
 
-													<a class="btn btn-success btn-sm  rounded" target="blank" href="print_inv_ship_track.php?id=<?php echo $track->order_id; ?>"><i style="color:white" class="ti-printer"></i>&nbsp;<?php echo $lang['toolprint'] ?></a>
-
-												</div>
-											</div>
 										</div>
 
 
