@@ -387,7 +387,7 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-3">
 												<div class="trackstatus-title">
-													<p><span class="ti-package align-top" style="font-size: 30px;"></span> <b><?php echo $track->mod_style; ?></b></p>
+													<p><span class="ti-package align-top" style="font-size: 30px;"></span>Current Status: <b><?php echo $track->mod_style; ?></b></p>
 													<label> </label>
 												</div>
 											</div>
