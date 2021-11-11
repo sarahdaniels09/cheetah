@@ -396,13 +396,13 @@ if ($track != null) {
 										<div class="row">
 
 
-											<div class="col-md-5">
+											<div class="col-md-6">
 												<div class="trackstatus-title">
 													<p><span class="ti-package align-top" style="font-size: 30px;"></span>Current Status: <b><?php echo $track->mod_style; ?></b></p>
 													<label> </label>
 												</div>
 											</div>
-											<div class="col-md-5">
+											<div class="col-md-4">
 												<div class="trackstatus-title">
 													<label><?php echo $lang['track-shipment4'] ?> <b><?php echo $track->order_prefix . $track->order_no; ?></b></label>
 												</div>
