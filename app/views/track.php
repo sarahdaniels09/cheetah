@@ -380,7 +380,7 @@ if ($track != null) {
 								<!--//END TRACKING NOT FOUND -->
 							<?php else : ?>
 
-								<div class="col-lg-7">
+								<div class="col-lg-12">
 									<div class="user-profile-data">
 
 										<br><br><br>
@@ -648,7 +648,7 @@ if ($track != null) {
 
 							<?php if (!$courier_track) : ?>
 							<?php else : ?>
-								<div class="col-lg-5">
+								<div class="col-lg-12">
 									<br><br><br>
 									<div class="booking-summary_block">
 										<div class="booking-summary-box">
