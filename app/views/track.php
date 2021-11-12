@@ -422,12 +422,12 @@ if ($track != null) {
 											<div class="row">
 												<div class="col-md-6">
 													<div class="track-title">
-														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?></br> <b><?php echo $address_order->sender_country; ?></b></label>
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label>From: </br> <b><?php echo $address_order->sender_country; ?></b></label>
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="track-title">
-														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?></br> <b><?php echo $address_order->recipient_country; ?></b></label>
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label>To: </br> <b><?php echo $address_order->recipient_country; ?></b></label>
 													</div>
 												</div>
 											</div>
