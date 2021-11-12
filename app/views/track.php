@@ -402,20 +402,16 @@ if ($track != null) {
 													<label> </label>
 												</div>
 											</div>
+
 											<div class="col-md-4">
 												<div class="trackstatus-title">
-													<label><?php echo $lang['track-shipment4'] ?> <b><?php echo $track->order_prefix . $track->order_no; ?></b></label>
+													<label>Tracking ID: <b><?php echo $track->order_prefix . $track->order_no; ?></b></label>
 												</div>
 											</div>
 
-
 										</div>
 
-
-
-
-
-										<div class="payment-wrap">
+										<!-- <div class="payment-wrap">
 											<div class="row">
 												<div class="col-md-12">
 													<div class="track-title">
@@ -423,14 +419,14 @@ if ($track != null) {
 													</div>
 												</div>
 
-												<?php
+												<//?php
 
 												if (!empty($track->photo_delivered)) { ?>
 
 													<div class="col-md-12">
-														<img src="<?php echo $track->photo_delivered; ?>" width="400" height="250">
+														<img src="<//?php echo $track->photo_delivered; ?>" width="400" height="250">
 													</div>
-												<?php
+												<//?php
 												} ?>
 											</div>
 
@@ -438,7 +434,7 @@ if ($track != null) {
 										</div>
 
 
-
+ -->
 
 
 
@@ -645,6 +641,11 @@ if ($track != null) {
 
 							<?php endif; ?>
 
+
+						</div> <!-- /.row -->
+
+						<div class="row">
+
 							<?php if (!$courier_track) : ?>
 							<?php else : ?>
 								<div class="col-lg-5">
@@ -693,7 +694,8 @@ if ($track != null) {
 										</div>
 									</div>
 								</div>
-						</div> <!-- /.row -->
+						</div>
+
 					</div> <!-- /.checkout-form -->
 				</div> <!-- /.container -->
 			</div>
