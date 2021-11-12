@@ -410,6 +410,33 @@ if ($track != null) {
 											</div>
 
 										</div>
+										<!-- General Information -->
+										<div class="payment-wrap">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="track-title">
+														<h5 class="form_sub" style="background-color: #2eca8b; color:white">Location</h5>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?></br> <b><?php echo $address_order->sender_country; ?></b></label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?></br> <b><?php echo $address_order->recipient_country; ?></b></label>
+													</div>
+												</div>
+											</div>
+
+
+
+
+										</div>
+										<!--// General Information -->
 
 										<!-- <div class="payment-wrap">
 											<div class="row">
@@ -433,11 +460,7 @@ if ($track != null) {
 
 										</div>
 
-
  -->
-
-
-
 
 
 										<?php
