@@ -642,7 +642,7 @@ if ($track != null) {
 									<div class="booking-summary-box">
 										<h5><?php echo $lang['track-shipment22'] ?></h5>
 										<?php foreach ($courier_track  as $rows) : ?>
-											<div class="track-cost">
+											<div class="track-cost track-title">
 												<ul class="timeline a">
 													<li class="event">
 														<div class="row">
