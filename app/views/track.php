@@ -662,13 +662,13 @@ if ($track != null) {
 																</button>
 															</div>
 
-															<div class="col-md-5">
+															<div class="col-md-3">
 																<label for="">Date and Time</label>
 																<p class="text-right"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
 																<h4></h4>
 															</div>
 
-															<div class="col-md-5">
+															<div class="col-md-3">
 																<label for="">Current Status</label>
 																<p class="text-right"><?php "Pending"; ?></p>
 																<h4></h4>
