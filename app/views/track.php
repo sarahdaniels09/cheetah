@@ -415,7 +415,7 @@ if ($track != null) {
 
 											<div class="col-md-3">
 												<div class="trackstatus-title">
-													<label>Destination: <b><?php echo $sender_address_data->address; ?></b></label>
+													<label>Destination: <b><?php echo $sender_address->too; ?></b></label>
 												</div>
 											</div>
 
