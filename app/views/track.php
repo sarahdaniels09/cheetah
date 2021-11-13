@@ -503,10 +503,25 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-12">
 												<div class="track-title">
-													<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment5'] ?></h5>
+													<h5 class="form_sub" style="background-color: #2eca8b; color:white">Sender / Reciever Information</h5>
 												</div>
 											</div>
 										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="track-title">
+													<label>Sender Name: <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="track-title">
+													<label>Recipient Name: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
+												</div>
+											</div>
+
+										</div>
+
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
