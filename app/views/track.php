@@ -516,7 +516,7 @@ if ($track != null) {
 											</div>
 											<div class="col-md-6">
 												<div class="track-title">
-													<label>Recipient Name: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
+													<label>Receiver Name: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
 												</div>
 											</div>
 
@@ -525,12 +525,12 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_country; ?></b></label>
+													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_address; ?></b></label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->sender_city; ?></b></label>
+													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->recipient_address; ?></b></label>
 												</div>
 											</div>
 										</div>
