@@ -415,7 +415,7 @@ if ($track != null) {
 
 											<div class="col-md-3">
 												<div class="trackstatus-title">
-													<label>Destination: <b><?php echo $address_order->recipient_zip_code; ?></b></label>
+													<label>Destination: <b><?php echo $address_order->too; ?></b></label>
 												</div>
 											</div>
 
