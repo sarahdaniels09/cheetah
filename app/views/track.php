@@ -398,7 +398,7 @@ if ($track != null) {
 
 											<div class="col-md-4">
 												<div class="trackstatus-title">
-													<p><span class="ti-package align-top" style="font-size: 30px;"></span>Current Status: <b><?php echo $track->mod_style; ?></b></p>
+													<p><span class="ti-package align-top" style="font-size: 30px;"></span>Shipping Status: <b><?php echo $track->mod_style; ?></b></p>
 													<label> </label>
 												</div>
 											</div>
@@ -653,15 +653,15 @@ if ($track != null) {
 																<h4></h4>
 															</div>
 															<div class="col-md-2">
-																<label for=""><b>New Location:</b></label>
+																<label for=""><b>Current Location:</b> </label>
 																<?php
 
 																if ($rows->t_dest != null) {
 																	echo $rows->t_dest;
-																}
-
-																if ($rows->t_city != null) {
+																} elseif ($rows->t_city != null) {
 																	echo ', ' . $rows->t_city;
+																} else {
+																	echo $address_order->sender_country;
 																}
 
 																?>
