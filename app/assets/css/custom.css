@@ -34,5 +34,5 @@
 
     .shipment__info {
         display: flex;
-        
+        width: 80%;
     }
