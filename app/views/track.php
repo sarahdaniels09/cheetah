@@ -432,9 +432,6 @@ if ($track != null) {
 												</div>
 											</div>
 
-
-
-
 										</div>
 										<!--// General Information -->
 
@@ -461,8 +458,8 @@ if ($track != null) {
 										</div>
 
  -->
-
-
+									</div>
+									<div class="col-lg-12">
 										<?php
 
 										$db->query("SELECT * FROM order_files where order_id='" . $track->order_id . "' ORDER BY date_file");
@@ -522,8 +519,8 @@ if ($track != null) {
 
 										<?php
 										} ?>
-
-
+									</div>
+									<div class="col-lg-6">
 										<!-- General Information -->
 										<div class="payment-wrap">
 											<div class="row">
@@ -603,7 +600,8 @@ if ($track != null) {
 
 										</div>
 										<!--// General Information -->
-
+									</div>
+									<div class="col-lg-6">
 										<!-- track shipment -->
 										<div class="payment-wrap">
 											<div class="row">
