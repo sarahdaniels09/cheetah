@@ -648,26 +648,21 @@ if ($track != null) {
 															</div>
 															<div class="col-md-2">
 																<label for=""><b>New Location:</b></label>
-																<p class="text-left">Canada</p>
+																<?php
+
+																if ($rows->t_dest != null) {
+																	echo $rows->t_dest;
+																}
+
+																if ($rows->t_city != null) {
+																	echo ', ' . $rows->t_city;
+																}
+
+																?>
 																<h4></h4>
 															</div>
 
 															<!-- <div class="col-md-3"> -->
-
-															<!-- 	<p class="text-left"><//?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p> -->
-
-															<!-- <//?php
-
-																	if ($rows->t_dest != null) {
-																		echo $rows->t_dest;
-																	}
-
-																	if ($rows->t_city != null) {
-																		echo ', ' . $rows->t_city;
-																	}
-
-																	?> -->
-
 
 															<!-- <button class="popup button4" onclick="mostrarMensaje('<//?php echo $rows->id; ?>')">+ <//?php echo $lang['left184'] ?>
 																	<span class="popuptext" id="myPopup_<//?php echo $rows->id; ?>"><//?php echo $rows->comments; ?></span>
@@ -676,19 +671,21 @@ if ($track != null) {
  -->
 															<div class="col-md-3">
 																<label for=""><b>Status:</b></label>
-																<h6 class="text-left"><?php echo $rows->mod_style; ?></h6>
+																<p class="text-left"><?php echo $rows->mod_style; ?></p>
 																<h4></h4>
 															</div>
 
 															<div class="col-md-2">
-																<label for=""><b>Date and Time:</b></label>
-																<p class="text-left"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
+																<label for=""><b>Time and Date:</b></label>
+																<p class="text-left"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?>/
+																<p class="text-left"><?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p>
+																</p>
 																<h4></h4>
 															</div>
 
 															<div class="col-md-3">
 																<label for=""><b>Remarks:</b></label>
-																<h6 class="text-left">Still on Transit</h6>
+																<p class="text-left">Still on Transit</p>
 																<h4></h4>
 															</div>
 
