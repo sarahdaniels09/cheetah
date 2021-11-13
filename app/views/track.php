@@ -641,22 +641,22 @@ if ($track != null) {
 													<li class="event">
 														<div class="row">
 
-															<div class="col-md-3">
+															<div class="col-md-2">
 																<label for=""><b>Tracking ID:</b></label>
 																<p class="text-left">CML-567464</p>
 																<h4></h4>
 															</div>
-															<div class="col-md-3">
+															<div class="col-md-2">
 																<label for=""><b>New Location:</b></label>
 																<p class="text-left">Canada</p>
 																<h4></h4>
 															</div>
 
-															<div class="col-md-3">
+															<!-- <div class="col-md-3"> -->
 
-																<!-- 	<p class="text-left"><//?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p> -->
+															<!-- 	<p class="text-left"><//?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p> -->
 
-																<!-- <//?php
+															<!-- <//?php
 
 																	if ($rows->t_dest != null) {
 																		echo $rows->t_dest;
@@ -669,18 +669,18 @@ if ($track != null) {
 																	?> -->
 
 
-																<!-- <button class="popup button4" onclick="mostrarMensaje('<//?php echo $rows->id; ?>')">+ <//?php echo $lang['left184'] ?>
+															<!-- <button class="popup button4" onclick="mostrarMensaje('<//?php echo $rows->id; ?>')">+ <//?php echo $lang['left184'] ?>
 																	<span class="popuptext" id="myPopup_<//?php echo $rows->id; ?>"><//?php echo $rows->comments; ?></span>
 																</button> -->
-															</div>
-
+															<!-- 	</div>
+ -->
 															<div class="col-md-3">
 																<label for=""><b>Status:</b></label>
 																<h6 class="text-left"><?php echo $rows->mod_style; ?></h6>
 																<h4></h4>
 															</div>
 
-															<div class="col-md-3">
+															<div class="col-md-2">
 																<label for=""><b>Date and Time:</b></label>
 																<p class="text-left"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
 																<h4></h4>
