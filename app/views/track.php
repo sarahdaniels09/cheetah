@@ -536,27 +536,27 @@ if ($track != null) {
 											<div class="row">
 												<div class="col-md-6">
 													<div class="track-title">
-														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?></br> <b><?php echo $address_order->sender_country; ?></b></label>
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_country; ?></b></label>
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="track-title">
-														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?></br> <b><?php echo $address_order->sender_city; ?></b></label>
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->sender_city; ?></b></label>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-md-6">
 													<div class="track-title">
-														<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment8'] ?></br> <b><?php echo $track->order_date; ?></b></label>
+														<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment8'] ?>: <b><?php echo $track->order_date; ?></b></label>
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="form-group">
 														<div class="track-title">
-															<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?></br> <b><?php if ($delivery_time != null) {
-																																														echo $delivery_time->delitime;
-																																													} ?></b></label>
+															<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
+																																													echo $delivery_time->delitime;
+																																												} ?></b></label>
 														</div>
 													</div>
 												</div>
@@ -564,7 +564,7 @@ if ($track != null) {
 											<div class="row">
 												<div class="col-md-6">
 													<div class="track-title">
-														<label><?php echo $lang['track-shipment20'] ?></br> <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></label>
+														<label><?php echo $lang['track-shipment20'] ?> <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></label>
 													</div>
 												</div>
 												<div class="col-md-6">
@@ -578,7 +578,7 @@ if ($track != null) {
 											<div class="row">
 												<div class="col-md-6">
 													<div class="track-title">
-														<label><?php echo $lang['track-shipment11'] ?></br> <b><?php echo $count; ?></b></label>
+														<label><?php echo $lang['track-shipment11'] ?> <b><?php echo $count; ?></b></label>
 													</div>
 												</div>
 												<!-- <div class="col-md-4">
@@ -591,11 +591,11 @@ if ($track != null) {
 												<div class="col-md-6">
 													<div class="form-group">
 														<div class="track-title">
-															<label><?php echo $lang['track-shipment13'] ?></br> <b><?php if ($sumador_libras > $sumador_volumetric) {
-																														echo  round_out($sumador_libras);
-																													} else {
-																														echo round_out($sumador_volumetric);
-																													} ?></b></label>
+															<label><?php echo $lang['track-shipment13'] ?> <b><?php if ($sumador_libras > $sumador_volumetric) {
+																													echo  round_out($sumador_libras);
+																												} else {
+																													echo round_out($sumador_volumetric);
+																												} ?></b></label>
 														</div>
 													</div>
 												</div>
