@@ -520,7 +520,7 @@ if ($track != null) {
 										<?php
 										} ?>
 									</div>
-									<div class="container">
+									<div class="shipment__info">
 										<div class="col-lg-6">
 											<!-- General Information -->
 											<div class="payment-wrap">
