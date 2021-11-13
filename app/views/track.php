@@ -662,13 +662,13 @@ if ($track != null) {
 																<h4></h4>
 															</div>
 
-															<!-- <div class="col-md-3"> -->
+															<!-- <div class="col-md-3">
 
-															<!-- <button class="popup button4" onclick="mostrarMensaje('<//?php echo $rows->id; ?>')">+ <//?php echo $lang['left184'] ?>
-																	<span class="popuptext" id="myPopup_<//?php echo $rows->id; ?>"><//?php echo $rows->comments; ?></span>
-																</button> -->
-															<!-- 	</div>
- -->
+															<button class="popup button4" onclick="mostrarMensaje('<?php echo $rows->id; ?>')">+ <?php echo $lang['left184'] ?>
+																	<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
+																</button>
+															</div> -->
+															-->
 															<div class="col-md-3">
 																<label for=""><b>Status:</b></label>
 																<p class="text-left"><?php echo $rows->mod_style; ?></p>
@@ -685,7 +685,7 @@ if ($track != null) {
 
 															<div class="col-md-3">
 																<label for=""><b>Remarks:</b></label>
-																<p class="text-left">Still on Transit</p>
+																<p class="text-left"><?php echo $rows->comments; ?></p>
 																<h4></h4>
 															</div>
 
