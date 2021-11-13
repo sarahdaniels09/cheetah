@@ -595,13 +595,13 @@ if ($track != null) {
 													<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $count; ?></b></label>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<!-- <div class="col-md-4">
 												<div class="form-group">
 													<div class="track-title">
-														<label><?php echo $lang['track-shipment12'] ?></br> <b><?php echo $row->package; ?></b></label>
+														<label><//?php echo $lang['track-shipment12'] ?></br> <b><//?php echo $row->package; ?></b></label>
 													</div>
 												</div>
-											</div>
+											</div> -->
 											<div class="col-md-6">
 												<div class="form-group">
 													<div class="track-title">
@@ -615,22 +615,7 @@ if ($track != null) {
 											</div>
 										</div>
 
-										<div class="row">
-											<div class="col-md-6">
-												<div class="track-title">
 
-													<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
-
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<div class="track-title">
-														<span class="ti-direction-alt align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment10'] ?>: <b><?php echo $address_order->recipient_address; ?></b></label>
-													</div>
-												</div>
-											</div>
-										</div>
 									</div>
 
 								</div> <!-- /.user-profile-data -->
