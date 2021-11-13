@@ -598,7 +598,7 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $count; ?></b></label>
+													<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $row_item->order_item_quantity; ?></b></label>
 												</div>
 											</div>
 											<!-- <div class="col-md-4">
