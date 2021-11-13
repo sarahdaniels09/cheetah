@@ -642,8 +642,13 @@ if ($track != null) {
 														<div class="row">
 
 															<div class="col-md-3">
-																<label for="">Tracking ID:</label>
+																<label for=""><b>Tracking ID:</b></label>
 																<p class="text-left">CML-567464</p>
+																<h4></h4>
+															</div>
+															<div class="col-md-3">
+																<label for=""><b>New Location:</b></label>
+																<p class="text-left">Canada</p>
 																<h4></h4>
 															</div>
 
@@ -670,14 +675,20 @@ if ($track != null) {
 															</div>
 
 															<div class="col-md-3">
-																<label for="">Date and Time</label>
+																<label for=""><b>Status:</b></label>
+																<h6 class="text-left"><?php echo $rows->mod_style; ?></h6>
+																<h4></h4>
+															</div>
+
+															<div class="col-md-3">
+																<label for=""><b>Date and Time:</b></label>
 																<p class="text-left"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
 																<h4></h4>
 															</div>
 
 															<div class="col-md-3">
-																<label for="">Status</label>
-																<h6 class="text-left"><?php echo $rows->mod_style; ?></h6>
+																<label for=""><b>Remarks:</b></label>
+																<h6 class="text-left">Still on Transit</h6>
 																<h4></h4>
 															</div>
 
