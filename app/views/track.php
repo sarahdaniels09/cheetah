@@ -58,6 +58,10 @@ if ($track != null) {
 	$db->query("SELECT * FROM users where id= '" . $track->sender_id . "'");
 	$sender_data = $db->registro();
 
+	$db->query("SELECT * FROM users_multiple_addresses where id_addresses= '" . $_POST["sender_address_id"] . "'");
+
+	$sender_address_data = $db->registro();
+
 	$db->query("SELECT * FROM users where id= '" . $track->receiver_id . "'");
 	$receiver_data = $db->registro();
 
@@ -411,7 +415,7 @@ if ($track != null) {
 
 											<div class="col-md-3">
 												<div class="trackstatus-title">
-													<label>Destination: <b><?php echo $address_order->sender_country; ?></b></label>
+													<label>Destination: <b><?php echo $sender_address_data->too; ?></b></label>
 												</div>
 											</div>
 
