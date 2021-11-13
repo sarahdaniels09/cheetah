@@ -556,34 +556,34 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-12">
 												<div class="track-title">
-													<h5 class="form_sub" style="background-color: #2eca8b; color:white">Shipping Information</h5>
+													<h5 class="form_sub" style="background-color: #2eca8b; color:white">Shipment Information</h5>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+													<!-- <span class="ti-location-pin align-top" style="font-size: 30px;"></span>  --><label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+													<!-- <span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label> --><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment8'] ?>: <b><?php echo $track->order_date; ?></b></label>
+													<!-- <span class="ti-calendar align-top" style="font-size: 30px;"></span> --> <label><?php echo $lang['track-shipment8'] ?>: <b><?php echo $track->order_date; ?></b></label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<div class="track-title">
-														<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
-																																												echo $delivery_time->delitime;
-																																											} ?></b></label>
+														<!-- <span class="ti-timer align-top" style="font-size: 30px;"></span>  --><label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
+																																															echo $delivery_time->delitime;
+																																														} ?></b></label>
 													</div>
 												</div>
 											</div>
