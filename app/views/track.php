@@ -640,11 +640,18 @@ if ($track != null) {
 												<ul class="timeline a">
 													<li class="event">
 														<div class="row">
+
 															<div class="col-md-3">
-																<p class="text-left"><?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p>
-																<h6 class="text-left"><?php echo $rows->mod_style; ?>
-																	<br>
-																	<?php
+																<label for="">Tracking ID:</label>
+																<p class="text-right">CML-567464</p>
+																<h4></h4>
+															</div>
+
+															<div class="col-md-3">
+
+																<!-- 	<p class="text-left"><//?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p> -->
+
+																<!-- <//?php
 
 																	if ($rows->t_dest != null) {
 																		echo $rows->t_dest;
@@ -654,12 +661,12 @@ if ($track != null) {
 																		echo ', ' . $rows->t_city;
 																	}
 
-																	?>
+																	?> -->
 
-																</h6>
-																<button class="popup button4" onclick="mostrarMensaje('<?php echo $rows->id; ?>')">+ <?php echo $lang['left184'] ?>
-																	<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
-																</button>
+
+																<!-- <button class="popup button4" onclick="mostrarMensaje('<//?php echo $rows->id; ?>')">+ <//?php echo $lang['left184'] ?>
+																	<span class="popuptext" id="myPopup_<//?php echo $rows->id; ?>"><//?php echo $rows->comments; ?></span>
+																</button> -->
 															</div>
 
 															<div class="col-md-3">
@@ -669,8 +676,8 @@ if ($track != null) {
 															</div>
 
 															<div class="col-md-3">
-																<label for="">Current Status</label>
-																<p class="text-right"><?php "Pending"; ?></p>
+																<label for="">Status</label>
+																<h6 class="text-left"><?php echo $rows->mod_style; ?></h6>
 																<h4></h4>
 															</div>
 
