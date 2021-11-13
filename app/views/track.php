@@ -643,7 +643,7 @@ if ($track != null) {
 
 															<div class="col-md-3">
 																<label for="">Tracking ID:</label>
-																<p class="text-right">CML-567464</p>
+																<p class="text-left">CML-567464</p>
 																<h4></h4>
 															</div>
 
@@ -671,7 +671,7 @@ if ($track != null) {
 
 															<div class="col-md-3">
 																<label for="">Date and Time</label>
-																<p class="text-right"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
+																<p class="text-left"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
 																<h4></h4>
 															</div>
 
