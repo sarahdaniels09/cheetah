@@ -643,7 +643,7 @@ if ($track != null) {
 
 															<div class="col-md-2">
 																<label for=""><b>Tracking ID:</b></label>
-																<p class="text-left">CML-567464</p>
+																<p class="text-left"><?php echo $track->order_prefix . $track->order_no; ?></p>
 																<h4></h4>
 															</div>
 															<div class="col-md-2">
