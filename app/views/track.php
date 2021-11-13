@@ -668,7 +668,7 @@ if ($track != null) {
 																	<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
 																</button>
 															</div> -->
-															-->
+
 															<div class="col-md-3">
 																<label for=""><b>Status:</b></label>
 																<p class="text-left"><?php echo $rows->mod_style; ?></p>
