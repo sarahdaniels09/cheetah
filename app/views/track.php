@@ -525,12 +525,12 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_address; ?></b></label>
+													<!-- <span class="ti-location-pin align-top" style="font-size: 30px;"></span> --> <label>Sender Address: <b><?php echo $address_order->sender_address; ?></b></label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->recipient_address; ?></b></label>
+													<!-- <span class="ti-location-pin align-top" style="font-size: 30px;"></span> --> <label>Receiver Address: <b><?php echo $address_order->recipient_address; ?></b></label>
 												</div>
 											</div>
 										</div>
@@ -538,16 +538,40 @@ if ($track != null) {
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
-													<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $sender_data->phone ?></b></label>
+													<label>Sender Phone: <b><?php echo $sender_data->phone ?></b></label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="track-title">
-													<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $receiver_data->phone ?></b></label>
+													<label>Receiver Phone: <b><?php echo $receiver_data->phone ?></b></label>
 												</div>
 											</div>
 										</div>
 
+									</div>
+									<!--// General Information -->
+
+									<!-- track shipment -->
+									<div class="payment-wrap">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="track-title">
+													<h5 class="form_sub" style="background-color: #2eca8b; color:white">Shipping Information</h5>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="track-title">
+													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="track-title">
+													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+												</div>
+											</div>
+										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
@@ -571,13 +595,13 @@ if ($track != null) {
 													<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $count; ?></b></label>
 												</div>
 											</div>
-											<!-- <div class="col-md-4">
+											<div class="col-md-4">
 												<div class="form-group">
 													<div class="track-title">
-													  <label><?php echo $lang['track-shipment12'] ?></br> <b><?php echo $row->package; ?></b></label>
+														<label><?php echo $lang['track-shipment12'] ?></br> <b><?php echo $row->package; ?></b></label>
 													</div>
 												</div>
-											</div> -->
+											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<div class="track-title">
@@ -591,46 +615,6 @@ if ($track != null) {
 											</div>
 										</div>
 
-									</div>
-									<!--// General Information -->
-
-									<!-- track shipment -->
-									<div class="payment-wrap">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="track-title">
-													<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment15'] ?></h5>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="track-title">
-													<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="track-title">
-													<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
-																																												echo $delivery_time->delitime;
-																																											} ?></b></label>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<div class="track-title">
-														<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment19'] ?>: <b><?php echo $track->order_datetime; ?></b></label>
-													</div>
-												</div>
-											</div>
-										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="track-title">
