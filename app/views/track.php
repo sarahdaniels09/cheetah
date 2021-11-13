@@ -433,294 +433,271 @@ if ($track != null) {
 											</div>
 
 										</div>
-										<!--// General Information -->
 
-										<!-- <div class="payment-wrap">
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<?php
+
+									$db->query("SELECT * FROM order_files where order_id='" . $track->order_id . "' ORDER BY date_file");
+									$files_order = $db->registros();
+									$numrows = $db->rowCount();
+
+
+									if ($numrows > 0) {
+									?>
+
+										<div class="payment-wrap">
 											<div class="row">
 												<div class="col-md-12">
 													<div class="track-title">
-														<h5 class="form_sub" style="background-color: #2eca8b; color:white">Photo delivered</h5>
+														<h5 class="form_sub" style="background-color: #2eca8b; color:white">Attached files</h5>
 													</div>
 												</div>
 
-												<//?php
+												<div class="table-responsive">
+													<table id="zero_config" class="table table-sm">
+														<thead>
+															<tr>
+																<th class="text-left"> <b> Nº </b></th>
+																<th class="text-left"> <b> File </b></th>
 
-												if (!empty($track->photo_delivered)) { ?>
+															</tr>
+														</thead>
+														<tbody id="projects-tbl">
 
-													<div class="col-md-12">
-														<img src="<//?php echo $track->photo_delivered; ?>" width="400" height="250">
-													</div>
-												<//?php
-												} ?>
+															<?php
+															$count = 0;
+															foreach ($files_order as $file) {
+
+																$date_add = date("Y-m-d h:i A", strtotime($file->date_file));
+
+
+
+																$count++;
+															?>
+
+																<tr class="">
+																	<td><b><?php echo $count; ?></b></td>
+																	<td> <b><a style="color:#7460ee;" target="_blank" href="<?php echo $file->url; ?>" class=""><?php echo $file->name; ?> </a> </b></td>
+
+																</tr>
+															<?php
+															} ?>
+
+
+														</tbody>
+													</table>
+												</div>
 											</div>
 
 
 										</div>
 
- -->
-									</div>
-									<div class="col-lg-12">
-										<?php
-
-										$db->query("SELECT * FROM order_files where order_id='" . $track->order_id . "' ORDER BY date_file");
-										$files_order = $db->registros();
-										$numrows = $db->rowCount();
-
-
-										if ($numrows > 0) {
-										?>
-
-											<div class="payment-wrap">
-												<div class="row">
-													<div class="col-md-12">
-														<div class="track-title">
-															<h5 class="form_sub" style="background-color: #2eca8b; color:white">Attached files</h5>
-														</div>
-													</div>
-
-													<div class="table-responsive">
-														<table id="zero_config" class="table table-sm">
-															<thead>
-																<tr>
-																	<th class="text-left"> <b> Nº </b></th>
-																	<th class="text-left"> <b> File </b></th>
-
-																</tr>
-															</thead>
-															<tbody id="projects-tbl">
-
-																<?php
-																$count = 0;
-																foreach ($files_order as $file) {
-
-																	$date_add = date("Y-m-d h:i A", strtotime($file->date_file));
-
-
-
-																	$count++;
-																?>
-
-																	<tr class="">
-																		<td><b><?php echo $count; ?></b></td>
-																		<td> <b><a style="color:#7460ee;" target="_blank" href="<?php echo $file->url; ?>" class=""><?php echo $file->name; ?> </a> </b></td>
-
-																	</tr>
-																<?php
-																} ?>
-
-
-															</tbody>
-														</table>
+									<?php
+									} ?>
+								</div>
+								<div class="shipment__info">
+									<div class="col-lg-6">
+										<!-- General Information -->
+										<div class="payment-wrap">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="track-title">
+														<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment5'] ?></h5>
 													</div>
 												</div>
-
-
 											</div>
-
-										<?php
-										} ?>
-									</div>
-									<div class="shipment__info">
-										<div class="col-lg-6">
-											<!-- General Information -->
-											<div class="payment-wrap">
-												<div class="row">
-													<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_country; ?></b></label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->sender_city; ?></b></label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment8'] ?>: <b><?php echo $track->order_date; ?></b></label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
 														<div class="track-title">
-															<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment5'] ?></h5>
+															<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
+																																													echo $delivery_time->delitime;
+																																												} ?></b></label>
 														</div>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment6'] ?>: <b><?php echo $address_order->sender_country; ?></b></label>
-														</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></label>
 													</div>
-													<div class="col-md-6">
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
 														<div class="track-title">
-															<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment7'] ?>: <b><?php echo $address_order->sender_city; ?></b></label>
+															<span class="ti-direction-alt align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment10'] ?>: <b><?php echo $address_order->sender_address; ?></b></label>
 														</div>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment8'] ?>: <b><?php echo $track->order_date; ?></b></label>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<div class="track-title">
-																<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
-																																														echo $delivery_time->delitime;
-																																													} ?></b></label>
-															</div>
-														</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $count; ?></b></label>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $sender_data->fname . " " . $sender_data->lname; ?></b></label>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<div class="track-title">
-																<span class="ti-direction-alt align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment10'] ?>: <b><?php echo $address_order->sender_address; ?></b></label>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<label><?php echo $lang['track-shipment11'] ?>: <b><?php echo $count; ?></b></label>
-														</div>
-													</div>
-													<!-- <div class="col-md-4">
+												<!-- <div class="col-md-4">
 												<div class="form-group">
 													<div class="track-title">
 													  <label><?php echo $lang['track-shipment12'] ?></br> <b><?php echo $row->package; ?></b></label>
 													</div>
 												</div>
 											</div> -->
-													<div class="col-md-6">
-														<div class="form-group">
-															<div class="track-title">
-																<label><?php echo $lang['track-shipment13'] ?>: <b><?php if ($sumador_libras > $sumador_volumetric) {
-																														echo  round_out($sumador_libras);
-																													} else {
-																														echo round_out($sumador_volumetric);
-																													} ?></b></label>
-															</div>
-														</div>
-													</div>
-												</div>
-
-											</div>
-											<!--// General Information -->
-										</div>
-										<div class="col-lg-6">
-											<!-- track shipment -->
-											<div class="payment-wrap">
-												<div class="row">
-													<div class="col-md-12">
+												<div class="col-md-6">
+													<div class="form-group">
 														<div class="track-title">
-															<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment15'] ?></h5>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="track-title">
-															<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-															<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
-																																														echo $delivery_time->delitime;
-																																													} ?></b></label>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<div class="track-title">
-																<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment19'] ?>: <b><?php echo $track->order_datetime; ?></b></label>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="track-title">
-
-															<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
-
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<div class="track-title">
-																<span class="ti-direction-alt align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment10'] ?>: <b><?php echo $address_order->recipient_address; ?></b></label>
-															</div>
+															<label><?php echo $lang['track-shipment13'] ?>: <b><?php if ($sumador_libras > $sumador_volumetric) {
+																													echo  round_out($sumador_libras);
+																												} else {
+																													echo round_out($sumador_volumetric);
+																												} ?></b></label>
 														</div>
 													</div>
 												</div>
 											</div>
 
-										</div> <!-- /.user-profile-data -->
-									</div> <!-- /.col- -->
-
-								<?php endif; ?>
-
-								</div>
-						</div> <!-- /.row -->
-
-						<div class="row">
-
-							<?php if (!$courier_track) : ?>
-							<?php else : ?>
-								<div class="col-lg-12">
-									<br><br><br>
-									<div class="booking-summary_block">
-										<div class="booking-summary-box">
-											<h5><?php echo $lang['track-shipment22'] ?></h5>
-											<?php foreach ($courier_track  as $rows) : ?>
-												<div class="track-cost">
-													<ul class="timeline a">
-														<li class="event">
-															<div class="row">
-																<div class="col-md-7">
-																	<p class="text-left"><?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p>
-																	<h6 class="text-left"><?php echo $rows->mod_style; ?>
-																		<br>
-																		<?php
-
-																		if ($rows->t_dest != null) {
-																			echo $rows->t_dest;
-																		}
-
-																		if ($rows->t_city != null) {
-																			echo ', ' . $rows->t_city;
-																		}
-
-																		?>
-
-																	</h6>
-																	<button class="popup button4" onclick="mostrarMensaje('<?php echo $rows->id; ?>')">+ <?php echo $lang['left184'] ?>
-																		<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
-																	</button>
-																</div>
-																<div class="col-md-5">
-																	<p class="text-right"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
-																	<h4></h4>
-																</div>
-															</div>
-														</li>
-														<!--event schedule 1 end-->
-													</ul>
-												</div>
-											<?php endforeach; ?>
-											<?php unset($row); ?>
-										<?php endif; ?>
 										</div>
+										<!--// General Information -->
+									</div>
+									<div class="col-lg-6">
+										<!-- track shipment -->
+										<div class="payment-wrap">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="track-title">
+														<h5 class="form_sub" style="background-color: #2eca8b; color:white"><?php echo $lang['track-shipment15'] ?></h5>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment16'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-location-pin align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment17'] ?>: <b><?php echo $address_order->recipient_city; ?></b></label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+														<span class="ti-calendar align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment9'] ?>: <b><?php if ($delivery_time != null) {
+																																													echo $delivery_time->delitime;
+																																												} ?></b></label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="track-title">
+															<span class="ti-timer align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment19'] ?>: <b><?php echo $track->order_datetime; ?></b></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="track-title">
+
+														<label><?php echo $lang['track-shipment20'] ?>: <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></label>
+
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="track-title">
+															<span class="ti-direction-alt align-top" style="font-size: 30px;"></span> <label><?php echo $lang['track-shipment10'] ?>: <b><?php echo $address_order->recipient_address; ?></b></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div> <!-- /.user-profile-data -->
+								</div> <!-- /.col- -->
+
+							<?php endif; ?>
+
+						</div>
+					</div> <!-- /.row -->
+
+					<div class="row">
+
+						<?php if (!$courier_track) : ?>
+						<?php else : ?>
+							<div class="col-lg-12">
+								<br><br><br>
+								<div class="booking-summary_block">
+									<div class="booking-summary-box">
+										<h5><?php echo $lang['track-shipment22'] ?></h5>
+										<?php foreach ($courier_track  as $rows) : ?>
+											<div class="track-cost">
+												<ul class="timeline a">
+													<li class="event">
+														<div class="row">
+															<div class="col-md-7">
+																<p class="text-left"><?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p>
+																<h6 class="text-left"><?php echo $rows->mod_style; ?>
+																	<br>
+																	<?php
+
+																	if ($rows->t_dest != null) {
+																		echo $rows->t_dest;
+																	}
+
+																	if ($rows->t_city != null) {
+																		echo ', ' . $rows->t_city;
+																	}
+
+																	?>
+
+																</h6>
+																<button class="popup button4" onclick="mostrarMensaje('<?php echo $rows->id; ?>')">+ <?php echo $lang['left184'] ?>
+																	<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
+																</button>
+															</div>
+															<div class="col-md-5">
+																<p class="text-right"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
+																<h4></h4>
+															</div>
+														</div>
+													</li>
+													<!--event schedule 1 end-->
+												</ul>
+											</div>
+										<?php endforeach; ?>
+										<?php unset($row); ?>
+									<?php endif; ?>
 									</div>
 								</div>
-						</div>
+							</div>
+					</div>
 
-					</div> <!-- /.checkout-form -->
-				</div> <!-- /.container -->
-			</div>
+				</div> <!-- /.checkout-form -->
+			</div> <!-- /.container -->
+		</div>
 		</div>
 	</section>
 	<!-- ERROR PAGE -->
