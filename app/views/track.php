@@ -640,7 +640,7 @@ if ($track != null) {
 												<ul class="timeline a">
 													<li class="event">
 														<div class="row">
-															<div class="col-md-7">
+															<div class="col-md-3">
 																<p class="text-left"><?php echo date('Y/m/d', strtotime($rows->t_date)); ?></p>
 																<h6 class="text-left"><?php echo $rows->mod_style; ?>
 																	<br>
@@ -661,10 +661,19 @@ if ($track != null) {
 																	<span class="popuptext" id="myPopup_<?php echo $rows->id; ?>"><?php echo $rows->comments; ?></span>
 																</button>
 															</div>
+
 															<div class="col-md-5">
+																<label for="">Date and Time</label>
 																<p class="text-right"><?php echo date('h:i:s a', strtotime($rows->t_date)); ?></p>
 																<h4></h4>
 															</div>
+
+															<div class="col-md-5">
+																<label for="">Current Status</label>
+																<p class="text-right"><?php "Pending"; ?></p>
+																<h4></h4>
+															</div>
+
 														</div>
 													</li>
 													<!--event schedule 1 end-->
