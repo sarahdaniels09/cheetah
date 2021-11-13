@@ -601,7 +601,7 @@ if ($track != null) {
 										</div>
 										<!--// General Information -->
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<!-- track shipment -->
 										<div class="payment-wrap">
 											<div class="row">
