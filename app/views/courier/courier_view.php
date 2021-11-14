@@ -847,7 +847,7 @@ if ($row_order->status_invoice == 1) {
                                                     </div>
 
                                                     <div class="input-group-prepend">
-                                                        <td><input type="text" <?php echo $address_order->too; ?> placeholder="Destination"></td>
+                                                        <td><input type="text" value="<?php echo $address_order->too; ?>" placeholder="Destination"></td>
                                                     </div>
                                                 </form>
 
