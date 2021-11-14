@@ -854,7 +854,7 @@ if ($row_order->status_invoice == 1) {
                                             <tr class="card-hover">
                                                 <?php echo $froom . ',' . $too; ?>
 
-                                                <form action="" method="POST">
+                                                <form action="courier_view.php" method="POST">
 
                                                     <div class="input-group-prepend">
                                                         <td><input type="text" value="<?php echo $address_order->froom; ?>" placeholder="Current Location"></td>
