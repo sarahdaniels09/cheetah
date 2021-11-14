@@ -840,14 +840,19 @@ if ($row_order->status_invoice == 1) {
 
 
                                             <?php
-                                            $testing = "";
+                                            $froom;
+                                            $too;
 
                                             if (isset($_POST['submit'])) {
-                                                $testing = "Button Working";
+
+                                                $froom = $_POST['froom'];
+                                                $too = $_POST['too'];
+
+                                                return true;
                                             }
                                             ?>
                                             <tr class="card-hover">
-                                                <?php echo $testing; ?>
+                                                <?php echo $froom . ',' . $too; ?>
 
                                                 <form action="" method="POST">
 
