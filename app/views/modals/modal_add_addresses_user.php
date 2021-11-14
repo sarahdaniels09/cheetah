@@ -17,7 +17,7 @@
 	                        <div class="col-md-6">
 	                            <div class="form-group">
 	                                <label for="phoneNumber1"><?php echo $lang['user_manage10'] ?></label>
-	                                <input type="text" class="form-control" name="froom" id="froom" placeholder="Enter Location">
+	                                <input type="text" class="form-control" name="froom" id="address" placeholder="Enter Location">
 	                            </div>
 	                        </div>
 
