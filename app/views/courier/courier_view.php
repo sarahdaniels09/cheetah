@@ -841,7 +841,8 @@ if ($row_order->status_invoice == 1) {
 
                                             <tr class="card-hover">
 
-                                                <form action="">
+                                                <form action="" method="">
+
                                                     <div class="input-group-prepend">
                                                         <td><input type="text" value="<?php echo $address_order->froom; ?>" placeholder="Current Location"></td>
                                                     </div>
@@ -853,6 +854,7 @@ if ($row_order->status_invoice == 1) {
                                                     <div class="input-group-prepend">
                                                         <td><button class="btn btn-primary">Update</button></td>
                                                     </div>
+
                                                 </form>
 
                                             </tr>
