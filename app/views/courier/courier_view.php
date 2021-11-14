@@ -830,30 +830,29 @@ if ($row_order->status_invoice == 1) {
                                     <table id="zero_config" class="table table-striped">
                                         <thead class="bg-inverse text-white">
                                             <tr>
-                                                
+
                                                 <th>From</th>
                                                 <th>To</th>
                                             </tr>
                                         </thead>
                                         <tbody id="projects-tbl">
 
-                                           
 
-                                                <tr class="card-hover">
-                                                    
-                                                    <form action="">
-                                                        <div class="input-group-prepend">
-                                                            <td><input type="text" placeholder="Current Location"></td>
-                                                        </div>
 
-                                                        <div class="input-group-prepend">
-                                                            <td><input type="text" placeholder="Destination"></td>
-                                                        </div>
-                                                    </form>
+                                            <tr class="card-hover">
 
-                                                </tr>
-                                            <?php
-                                            } ?>
+                                                <form action="">
+                                                    <div class="input-group-prepend">
+                                                        <td><input type="text" placeholder="Current Location"></td>
+                                                    </div>
+
+                                                    <div class="input-group-prepend">
+                                                        <td><input type="text" placeholder="Destination"></td>
+                                                    </div>
+                                                </form>
+
+                                            </tr>
+
 
 
                                         </tbody>
@@ -1322,7 +1321,7 @@ if ($row_order->status_invoice == 1) {
                                             </tfoot>
                                         <?php
                                                 } ?> <?php
-                                            } ?>
+                                                    } ?>
                                     </table>
                                 </div>
 
