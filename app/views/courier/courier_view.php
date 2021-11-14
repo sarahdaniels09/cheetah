@@ -839,7 +839,12 @@ if ($row_order->status_invoice == 1) {
                                         <tbody id="projects-tbl">
 
 
+                                            <?php
 
+                                            if (isset($_POST['submit'])) {
+                                                echo "Button Working";
+                                            }
+                                            ?>
                                             <tr class="card-hover">
 
                                                 <form action="" method="">
@@ -853,7 +858,7 @@ if ($row_order->status_invoice == 1) {
                                                     </div>
 
                                                     <div class="input-group-prepend">
-                                                        <td><button class="btn btn-primary">Update</button></td>
+                                                        <td><button type="submit" class="btn btn-primary">Update</button></td>
                                                     </div>
 
                                                 </form>
