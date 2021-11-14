@@ -24,7 +24,7 @@
 	                        <div class="col-md-6">
 	                            <div class="form-group">
 	                                <label for="emailAddress1"><?php echo $lang['user_manage12'] ?></label>
-	                                <input type="text" class="form-control" name="too" id="too" placeholder="Enter Destination">
+	                                <input type="text" class="form-control" name="too" id="country" placeholder="Enter Destination">
 	                            </div>
 	                        </div>
 	                    </div>
