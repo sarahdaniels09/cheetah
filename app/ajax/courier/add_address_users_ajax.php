@@ -21,7 +21,175 @@
 
 
 
-   require_once ("../../loader.php");
+require_once("../../loader.php");
+require_once("../../helpers/querys.php");
+$user = new User;
+$core = new Core;
+
+$userData = $user->getUserData();
+$row_order = $data['data'];
+$errors = array();
+
+if (empty($_POST['froom']))
+
+  $errors['froom'] = 'Please enter the Location';
+
+
+if (empty($_POST['too']))
+
+  $errors['too'] = 'Please enter the Destination';
+
+if (empty($errors)) {
+
+
+  $db->query("
+
+                   UPDATE address_shipments SET
+                  
+                   froom= :froom,
+                    too= :too
+
+                    WHERE order_track=:order_track
+
+                ");
+
+  /*  
+                if ($_POST['type_user_address']=='user_customer') {
+
+                    $db->bind(':user_id',  $_GET["sender"]);
+                }else{
+                    $db->bind(':user_id',  $_GET["recipient"]);
+
+                } */
+
+  $db->bind(':order_track',  $row_order->order_prefix . $row_order->order_no);
+  $db->bind(':froom',  trim($_POST["froom"]));
+  $db->bind(':too',  trim($_POST["too"]));
+
+  $insert = $db->execute();
+
+  /* $last_address_id = $db->dbh->lastInsertId();  
+
+              $db->query("SELECT * FROM users_multiple_addresses where id_addresses= '".$last_address_id."'"); 
+              $customer_address= $db->registro();   */
+
+
+
+  if ($insert) {
+
+    $messages[] = "Location Updataed successfully!";
+  } else {
+
+    $errors['critical_error'] = "the registration was not completed";
+  }
+}
+
+
+if (!empty($errors)) {
+  // var_dump($errors);
+?>
+  <div class="alert alert-danger" id="success-alert">
+    <p><span class="icon-minus-sign"></span><i class="close icon-remove-circle"></i>
+      <span>Error! </span> There was an error processing the request
+    <ul class="error">
+      <?php
+      foreach ($errors as $error) { ?>
+        <li>
+          <i class="icon-double-angle-right"></i>
+          <?php
+          echo $error;
+
+          ?>
+
+        </li>
+      <?php
+
+      }
+      ?>
+
+
+    </ul>
+    </p>
+  </div>
+
+
+
+<?php
+}
+
+if (isset($messages)) {
+
+?>
+  <div class="alert alert-info" id="success-alert">
+    <p><span class="icon-info-sign"></span><i class="close icon-remove-circle"></i>
+      <?php
+      foreach ($messages as $message) {
+        echo $message;
+      }
+      ?>
+    </p>
+
+    <script>
+      $("#add_address_from_modal_shipments")[0].reset();
+    </script>
+  </div>
+
+
+
+  <?php
+  if ($_POST['type_user_address'] == 'user_recipient') { ?>
+
+    <script>
+      var data_address = {
+        id: <?php echo $customer_address->id_addresses; ?>,
+        text: "<?php echo $customer_address->address; ?>"
+      };
+
+
+      var newOption = new Option(data_address.text, data_address.id, false, false);
+
+      $('#recipient_address_id').append(newOption).trigger('change');
+      $('#recipient_address_id').val(data_address.id).trigger('change');
+    </script>
+
+  <?php }
+
+
+  if ($_POST['type_user_address'] == 'user_customer') { ?>
+
+
+    <script>
+      var data_address = {
+        id: <?php echo $customer_address->id_addresses; ?>,
+        text: "<?php echo $customer_address->address; ?>"
+      };
+
+
+      var newOption = new Option(data_address.text, data_address.id, false, false);
+
+      $('#sender_address_id').append(newOption).trigger('change');
+      $('#sender_address_id').val(data_address.id).trigger('change');
+    </script>
+
+<?php
+  }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+require_once ("../../loader.php");
    require_once ("../../helpers/querys.php");
     $user = new User;
     $core = new Core;
@@ -117,17 +285,17 @@
                 <p><span class="icon-minus-sign"></span><i class="close icon-remove-circle"></i>
                     <span>Error! </span> There was an error processing the request
                     <ul class="error">
-                         <?php
+                         <//?php
                             foreach ($errors as $error) {?>
                         <li>
                             <i class="icon-double-angle-right"></i>
-                            <?php
+                            <//?php
                              echo $error;
                             
                             ?>
 
                         </li>
-                        <?php
+                        <//?php
                              
                         }
                         ?>
@@ -139,7 +307,7 @@
 
 
 			
-			<?php
+			<//?php
 			}
 
 			if (isset($messages)){
@@ -147,7 +315,7 @@
 				?>
                <div class="alert alert-info" id="success-alert">
                     <p><span class="icon-info-sign"></span><i class="close icon-remove-circle"></i>
-                        <?php
+                        <//?php
                         foreach ($messages as $message) {
                                 echo $message;
                             }
@@ -161,14 +329,14 @@
 
 
 
-                <?php
+                <//?php
                 if ($_POST['type_user_address']=='user_recipient') { ?>
 
                  <script>              
                     
                      var data_address = {
-                        id: <?php echo $customer_address->id_addresses;?>,
-                        text:"<?php echo $customer_address->address;?>"
+                        id: <//?php echo $customer_address->id_addresses;?>,
+                        text:"<//?php echo $customer_address->address;?>"
                     };
 
 
@@ -182,7 +350,7 @@
 
                   </script>
 
-                <?php } 
+                <//?php } 
 
 
                 if ($_POST['type_user_address']=='user_customer') { ?>
@@ -191,8 +359,8 @@
                   <script>             
                    
                      var data_address = {
-                        id: <?php echo $customer_address->id_addresses;?>,
-                        text:"<?php echo $customer_address->address;?>"
+                        id: <//?php echo $customer_address->id_addresses;?>,
+                        text:"<//?php echo $customer_address->address;?>"
                     };
 
 
@@ -204,9 +372,8 @@
 
                   </script>
 
-                  <?php
+                  <//?php
                   }
         
       }
-?>      
-				
+?>       -->
