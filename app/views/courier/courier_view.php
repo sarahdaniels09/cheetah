@@ -840,8 +840,8 @@ if ($row_order->status_invoice == 1) {
 
 
                                             <?php
-                                            $froom;
-                                            $too;
+                                            $froom = "";
+                                            $too = "";
 
                                             if (isset($_POST['submit'])) {
 
