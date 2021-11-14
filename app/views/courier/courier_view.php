@@ -831,8 +831,9 @@ if ($row_order->status_invoice == 1) {
                                         <thead class="bg-inverse text-white">
                                             <tr>
 
-                                                <th>From::</th>
-                                                <th>To::</th>
+                                                <th>From >></th>
+                                                <th>To >></th>
+                                                <th>Action >></th>
                                             </tr>
                                         </thead>
                                         <tbody id="projects-tbl">
