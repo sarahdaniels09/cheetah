@@ -840,6 +840,7 @@ if ($row_order->status_invoice == 1) {
 
 
                                             <?php
+                                            $testing = "";
 
                                             if (isset($_POST['submit'])) {
                                                 $testing = "Button Working";
