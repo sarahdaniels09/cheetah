@@ -823,7 +823,7 @@ if ($row_order->status_invoice == 1) {
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fa fa-paperclip"></i> Input Location</h5>
+                                <h5 class="card-title"><i class="fa fa-map-marker"></i> Input Location</h5>
                                 <hr>
 
                                 <div class="table-responsive">
