@@ -136,13 +136,13 @@ if (isset($messages)) {
 
 
 
-  <?php
+  <!-- </?php
   if ($_POST['type_user_address'] == 'user_recipient') { ?>
 
     <script>
       var data_address = {
-        id: <?php echo $customer_address->id_addresses; ?>,
-        text: "<?php echo $customer_address->address; ?>"
+        id: <//?php echo $customer_address->id_addresses; ?>,
+        text: "<//?php echo $customer_address->address; ?>"
       };
 
 
@@ -152,7 +152,7 @@ if (isset($messages)) {
       $('#recipient_address_id').val(data_address.id).trigger('change');
     </script>
 
-  <?php }
+  <//?php }
 
 
   if ($_POST['type_user_address'] == 'user_customer') { ?>
@@ -160,8 +160,8 @@ if (isset($messages)) {
 
     <script>
       var data_address = {
-        id: <?php echo $customer_address->id_addresses; ?>,
-        text: "<?php echo $customer_address->address; ?>"
+        id: <//?php echo $customer_address->id_addresses; ?>,
+        text: "<//?php echo $customer_address->address; ?>"
       };
 
 
@@ -171,10 +171,10 @@ if (isset($messages)) {
       $('#sender_address_id').val(data_address.id).trigger('change');
     </script>
 
-<?php
+<//?php
   }
 }
-?>
+?> -->
 
 
 

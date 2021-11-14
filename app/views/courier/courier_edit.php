@@ -298,8 +298,6 @@ if (isset($_POST["total_item"])) {
     $db->bind(':recipient_city',  $recipient_city);
     $db->bind(':recipient_zip_code',  $recipient_zip_code);
 
-    $db->bind(':froom',  $froom);
-    $db->bind(':too',  $too);
 
     $db->execute();
 
