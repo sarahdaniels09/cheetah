@@ -842,10 +842,11 @@ if ($row_order->status_invoice == 1) {
                                             <?php
 
                                             if (isset($_POST['submit'])) {
-                                                echo "Button Working";
+                                                $testing = "Button Working";
                                             }
                                             ?>
                                             <tr class="card-hover">
+                                                <?php echo $testing; ?>
 
                                                 <form action="" method="POST">
 
