@@ -831,8 +831,8 @@ if ($row_order->status_invoice == 1) {
                                         <thead class="bg-inverse text-white">
                                             <tr>
 
-                                                <th>From</th>
-                                                <th>To</th>
+                                                <th>From::</th>
+                                                <th>To::</th>
                                             </tr>
                                         </thead>
                                         <tbody id="projects-tbl">
@@ -843,11 +843,11 @@ if ($row_order->status_invoice == 1) {
 
                                                 <form action="">
                                                     <div class="input-group-prepend">
-                                                        <td><input type="text" placeholder="Current Location"></td>
+                                                        <td><input type="text" value="<?php echo $address_order->froom; ?>" placeholder="Current Location"></td>
                                                     </div>
 
                                                     <div class="input-group-prepend">
-                                                        <td><input type="text" placeholder="Destination"></td>
+                                                        <td><input type="text" <?php echo $address_order->too; ?> placeholder="Destination"></td>
                                                     </div>
                                                 </form>
 
