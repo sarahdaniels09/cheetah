@@ -678,7 +678,7 @@ $address_order = $db->registro();
         <table id="signing">
             <tr class="noBorder">
                 <td align="center">
-                    <img src="../../assets/images/cheetahsign.png" alt="">
+                    <img src="../../assets/images/cheetahsign.png" alt="Sign">
                     <h4></h4>
                 </td>
                 <td align="center">
