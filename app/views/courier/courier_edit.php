@@ -2241,19 +2241,19 @@ if (isset($_POST["total_item"])) {
                 return false;
             }
 
-            if ($.trim($('#city').val()).length == 0) {
-                alert("Please enter city");
-                $('#city').focus();
+            /*  if ($.trim($('#city').val()).length == 0) {
+                 alert("Please enter city");
+                 $('#city').focus();
 
-                return false;
-            }
+                 return false;
+             }
 
-            if ($.trim($('#postal').val()).length == 0) {
-                alert("Please enter zip code");
-                $('#postal').focus();
+             if ($.trim($('#postal').val()).length == 0) {
+                 alert("Please enter zip code");
+                 $('#postal').focus();
 
-                return false;
-            }
+                 return false;
+             } */
 
 
 
