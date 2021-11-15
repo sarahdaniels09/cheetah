@@ -562,7 +562,7 @@ if (isset($_POST["total_item"])) {
                     </div>
                     <!-- Row -->
 
-                    <div class="row">
+                    <!--   <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
@@ -581,11 +581,7 @@ if (isset($_POST["total_item"])) {
                                             </div>
                                         </div>
 
-
-
-
-
-                                        <!--  <div class="col-md-12 ">
+                                          <div class="col-md-12 ">
 
                                             <label for="inputcontact" class="control-label col-form-label"><//?php echo $lang['sender_search_address_title'] ?></label>
 
@@ -599,7 +595,7 @@ if (isset($_POST["total_item"])) {
                                                 </div>
 
                                             </div>
-                                        </div> -->
+                                        </div> 
 
                                     </div>
 
@@ -609,7 +605,7 @@ if (isset($_POST["total_item"])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Row -->
 
 
@@ -806,7 +802,6 @@ if (isset($_POST["total_item"])) {
                                         </div>
 
                                         <!--/span-->
-
 
                                         <!--/span-->
 
