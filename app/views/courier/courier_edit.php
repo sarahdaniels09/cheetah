@@ -280,8 +280,8 @@ if (isset($_POST["total_item"])) {
                     recipient_city= :recipient_city,
                     recipient_zip_code=:recipient_zip_code,
 
-                    froom= :froom,
-                    too= :too
+                    froom= :froom
+                   
 
                     WHERE order_track=:order_track
 
@@ -302,7 +302,7 @@ if (isset($_POST["total_item"])) {
     $db->bind(':recipient_zip_code',  $recipient_zip_code);
 
     $db->bind(':froom',  $froom);
-    $db->bind(':too',  $too);
+    /* $db->bind(':too',  $too); */
 
 
     $db->execute();
@@ -578,7 +578,7 @@ if (isset($_POST["total_item"])) {
 
                                             <label class="control-label col-form-label">Shipment Location</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" name="froom" value="<//?php echo $address_order_data->froom; ?>" placeholder="Shipment Location">
+                                                <input type="text" class="form-control" name="froom" value="" placeholder="Shipment Location">
                                             </div>
                                         </div>
 
