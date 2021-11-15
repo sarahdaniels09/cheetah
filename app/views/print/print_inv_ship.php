@@ -400,7 +400,7 @@ $address_order = $db->registro();
 
                 <td style="border: 0;  text-align: left" width="18%">
                     <div id="logo">
-
+                        <h2>Head Office</h2>
                         735 E Quinlan Pkwy, </br>
                         Quinlan, TX 75474, </br>
                         United States</br>
@@ -675,16 +675,20 @@ $address_order = $db->registro();
             <p align="justify"><?php echo cleanOut($core->interms); ?></p>
         </table>
         </br></br></br></br>
-        <!-- <table id="signing">
-				<tr class="noBorder">
-					<td align="center"><h4></h4></td>
-					<td align="center"><h4></h4></td>
-				</tr>
-				<tr class="noBorder">
-					<td align="center"><//?php echo $core->signing_company;?></td>
-					<td align="center"><//?php echo $core->signing_customer;?></td>
-				</tr>
-			</table> -->
+        <table id="signing">
+            <tr class="noBorder">
+                <td align="center">
+                    <h4></h4>
+                </td>
+                <td align="center">
+                    <h4></h4>
+                </td>
+            </tr>
+            <tr class="noBorder">
+                <td align="center"><?php echo $core->signing_company; ?></td>
+                <td align="center"><?php echo $core->signing_customer; ?></td>
+            </tr>
+        </table>
     </div>
     <button class='button -dark center no-print' onClick="window.print();" style="font-size:16px"><?php echo $lang['inv-shipping19'] ?>&nbsp;&nbsp; <i class="fa fa-print"></i></button>
     </div>

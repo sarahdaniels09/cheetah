@@ -279,7 +279,6 @@ if (isset($_POST["total_item"])) {
                     recipient_country= :recipient_country,
                     recipient_city= :recipient_city,
                     recipient_zip_code=:recipient_zip_code,
-
                     froom= :froom
                    
 
