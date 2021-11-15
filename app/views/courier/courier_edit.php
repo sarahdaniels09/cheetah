@@ -51,7 +51,7 @@ $receiver_data = $db->registro();
 $db->query("SELECT * FROM address_shipments where order_track='" . $row_order->order_prefix . $row_order->order_no . "'");
 $address_order = $db->registro();
 
-
+$address_order = $address_order_data->froom;
 
 
 if (isset($_POST["total_item"])) {
@@ -280,6 +280,9 @@ if (isset($_POST["total_item"])) {
                     recipient_city= :recipient_city,
                     recipient_zip_code=:recipient_zip_code,
 
+                    froom= :froom,
+                    too= :too
+
                     WHERE order_track=:order_track
 
             ");
@@ -297,6 +300,9 @@ if (isset($_POST["total_item"])) {
     $db->bind(':recipient_country',  $recipient_country);
     $db->bind(':recipient_city',  $recipient_city);
     $db->bind(':recipient_zip_code',  $recipient_zip_code);
+
+    $db->bind(':froom',  $froom);
+    $db->bind(':too',  $too);
 
 
     $db->execute();
@@ -556,6 +562,58 @@ if (isset($_POST["total_item"])) {
                         </div>
                     </div>
                     <!-- Row -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title"><i class="mdi mdi-information-outline" style="color:#36bea6"></i><?php echo $lang['langs_010']; ?></h4>
+                                    <hr>
+
+                                    <div class="resultados_ajax_add_user_modal_sender"></div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-12 ">
+
+                                            <label class="control-label col-form-label">Shipment Location</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="froom" value="<?php echo $address_order_data->froom; ?>" placeholder="Shipment Location">
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <!--  <div class="col-md-12 ">
+
+                                            <label for="inputcontact" class="control-label col-form-label"><//?php echo $lang['sender_search_address_title'] ?></label>
+
+                                            <div class="input-group">
+                                                <select class="select2 form-control" id="sender_address_id" name="sender_address_id">
+                                                    <option value="<//?php echo $row_order->sender_address_id; ?>"><//?php echo $address_order->sender_address; ?></option>
+                                                </select>
+
+                                                <div class="input-group-append input-sm">
+                                                    <button id="add_address_sender" data-type_user="user_customer" data-toggle="modal" data-target="#myModalAddRecipientAddresses" type="button" class="btn btn-info"><i class="fa fa-plus"></i></button>
+                                                </div>
+
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row -->
+
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
