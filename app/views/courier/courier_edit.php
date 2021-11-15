@@ -51,7 +51,7 @@ $receiver_data = $db->registro();
 $db->query("SELECT * FROM address_shipments where order_track='" . $row_order->order_prefix . $row_order->order_no . "'");
 $address_order = $db->registro();
 
-$address_order = $address_order_data->froom;
+/* $address_order = $address_order_data->froom; */
 
 
 if (isset($_POST["total_item"])) {
@@ -578,7 +578,7 @@ if (isset($_POST["total_item"])) {
 
                                             <label class="control-label col-form-label">Shipment Location</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" name="froom" value="<?php echo $address_order_data->froom; ?>" placeholder="Shipment Location">
+                                                <input type="text" class="form-control" name="froom" value="<//?php echo $address_order_data->froom; ?>" placeholder="Shipment Location">
                                             </div>
                                         </div>
 
