@@ -665,7 +665,7 @@ if ($track != null) {
 																} elseif ($rows->t_city != null) {
 																	echo ', ' . $rows->t_city;
 																} else {
-																	echo $address_order->sender_country;
+																	echo $address_order->froom;
 																}
 
 																?>
