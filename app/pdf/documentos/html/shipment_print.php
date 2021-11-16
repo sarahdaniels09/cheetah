@@ -202,12 +202,13 @@
     <table style="width: 100%;">
         <tr>
             <td style="width: 20%">
+
                 <h2>Head Office</h2>
-                735 E Quinlan Pkwy, </br>
-                Quinlan, TX 75474, </br>
-                United States</br>
-                +1 (903)-623-5667 </br>
-                support@cheetahmileslogistics.com</br>
+                <p>735 E Quinlan Pkwy,</p>
+                <p>Quinlan, TX 75474,</p>
+                <p>United States</p>
+                <p>+1 (903)-623-5667</p>
+                <p>support@cheetahmileslogistics.com</p>
             </td>
             <td style="width: 40%; text-align: center">
                 <img src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $row->order_prefix . $row->order_no; ?>&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=72&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0&modulewidth=50' alt='' />
