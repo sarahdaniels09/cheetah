@@ -210,7 +210,7 @@
                 <p>+1 (903)-623-5667</p>
                 <p>support@cheetahmileslogistics.com</p>
             </td>
-            <td style="width: 40%; text-align: center">
+            <td style="width: 40%; text-align: left">
                 <?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '" width="220" />' : $core->site_name; ?>
 
 
