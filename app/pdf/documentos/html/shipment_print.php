@@ -225,7 +225,7 @@
             <td rowspan="5" style="border: 1px solid white;  text-align: left; width: 60%">
                 <strong style="font-size: 15px"><?php echo $lang['inv-shipping5'] ?></strong> <br>
                 <!-- <table id="items"> -->
-                <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
+                <?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></br> </br>
                 <?php echo $address_order->recipient_address; ?> </br>
                 <?php echo $receiver_data->phone; ?> </br>
                 <?php echo $receiver_data->email; ?>
