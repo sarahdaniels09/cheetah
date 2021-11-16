@@ -225,10 +225,11 @@
             <td rowspan="5" style="border: 1px solid white;  text-align: left; width: 60%">
                 <strong style="font-size: 15px"><?php echo $lang['inv-shipping5'] ?></strong> <br>
                 <!-- <table id="items"> -->
-                <?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></br> </br>
-                <?php echo $address_order->recipient_address; ?> </br>
-                <?php echo $receiver_data->phone; ?> </br>
-                <?php echo $receiver_data->email; ?>
+                <?php echo $sender_data->fname . " " . $sender_data->lname; ?><br> <br>
+                <?php echo $address_order->sender_address; ?> <br>
+                <?php echo $address_order->sender_country . " | " . $address_order->sender_city; ?> <br>
+                <?php echo $sender_data->phone; ?> <br>
+                <?php echo $sender_data->email; ?>
                 <!-- </table>	 -->
             </td>
             <td style="border-bottom:  2px; border-top:  2px; border-left: 2px" class="meta-head">
