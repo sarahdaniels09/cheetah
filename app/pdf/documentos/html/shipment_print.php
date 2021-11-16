@@ -504,6 +504,8 @@
                 <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b>
 
                 <br>
+                <br>
+                <br>
 
                 <?php echo $core->signing_customer; ?>
             </td>
