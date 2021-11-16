@@ -201,7 +201,7 @@
 
     <table style="width: 100%;">
         <tr>
-            <td style="width: 20%">
+            <td style="width: 18%">
 
                 <h2>Head Office</h2>
                 <p>735 E Quinlan Pkwy,</p>
@@ -210,13 +210,13 @@
                 <p>+1 (903)-623-5667</p>
                 <p>support@cheetahmileslogistics.com</p>
             </td>
-            <td style="width: 40%; text-align: center">
+            <td style="width: 56%; text-align: center">
                 <?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '" width="250" />' : $core->site_name; ?>
 
 
 
             </td>
-            <td style="width: 40%; text-align: center">
+            <td style="width: 48%; text-align: center">
                 <br><img src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $row->order_prefix . $row->order_no; ?>&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=72&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0&modulewidth=50' alt='' />
             </td>
 
