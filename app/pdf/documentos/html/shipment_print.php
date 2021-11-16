@@ -202,14 +202,17 @@
     <table style="width: 100%;">
         <tr>
             <td style="width: 20%">
-                <?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '" width="190" height="45"/>' : $core->site_name; ?>
-
+                <h2>Head Office</h2>
+                735 E Quinlan Pkwy, </br>
+                Quinlan, TX 75474, </br>
+                United States</br>
+                +1 (903)-623-5667 </br>
+                support@cheetahmileslogistics.com</br>
             </td>
             <td style="width: 40%; text-align: center">
-                <?php echo $lang['inv-shipping1'] ?>: <?php echo $core->c_nit; ?> <br>
-                <?php echo $lang['inv-shipping2'] ?>: <?php echo $core->c_phone; ?><br>
-                <?php echo $lang['inv-shipping3'] ?>: <?php echo $core->site_email; ?><br>
-                <?php echo $lang['inv-shipping4'] ?>: <?php echo $core->c_address; ?> - <?php echo $core->c_country; ?>-<?php echo $core->c_city; ?>
+                <img src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $row->order_prefix . $row->order_no; ?>&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=72&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0&modulewidth=50' alt='' />
+
+
             </td>
             <td style="width: 40%; text-align: center">
                 <br><img src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $row->order_prefix . $row->order_no; ?>&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=72&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0&modulewidth=50' alt='' />
