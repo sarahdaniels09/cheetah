@@ -233,7 +233,7 @@
                 <?php echo $receiver_data->fname . " " . $receiver_data->lname; ?><br> <br>
                 <?php echo $address_order->recipient_address; ?> <br>
                 <?php echo $receiver_data->phone; ?> <br>
-                <?php echo $receier_data->email; ?>
+                <?php echo $receiver_data->email; ?>
                 <!-- </table>	 -->
             </td>
             <td style="border-bottom:  2px; border-top:  2px; border-left: 2px" class="meta-head">
