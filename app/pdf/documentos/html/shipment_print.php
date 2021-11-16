@@ -211,7 +211,8 @@
                 <p>support@cheetahmileslogistics.com</p>
             </td>
             <td style="width: 40%; text-align: center">
-                <img src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $row->order_prefix . $row->order_no; ?>&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=72&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0&modulewidth=50' alt='' />
+                <?php echo ($core->logo) ? '<img src="assets/' . $core->logo . '" alt="' . $core->site_name . '" width="250" />' : $core->site_name; ?>
+
 
 
             </td>
