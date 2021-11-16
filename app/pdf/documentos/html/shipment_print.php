@@ -489,7 +489,8 @@
         </tr>
         <tr>
             <td style="width:40%;text-align: center;">
-                <hr style=" height: 1px; color: solid grey; margin-top:45px">
+                <img src="https://cheetahmileslogistics.com/app/assets/images/cheetahsign.png" width="150px" alt="Sign">
+
 
                 <br>
 
@@ -500,7 +501,7 @@
 
                 <!-- <hr style=" height: 1px; color: solid grey"> -->
 
-                <hr style=" height: 1px; color: solid grey; margin-top: 45px">
+                <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b>
 
                 <br>
 
