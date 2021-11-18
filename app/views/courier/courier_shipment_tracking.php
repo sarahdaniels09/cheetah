@@ -546,7 +546,8 @@
                                                     <div class="input-group mb-3">
                                                         <select class="custom-select col-12"  name="country" id="country" placeholder="--Select country--" required="required">
                                                         <!-- <datalist id="browsers"> -->
-                                                            <option value="">--Select country--</option>                                                         
+                                                            <option value="">--Select country--</option> 
+                                                             <option value="En route">En route</option>                                                        
                                                             <option value="United States">United States</option> 
                                                             <option value="United Kingdom">United Kingdom</option> 
                                                             <option value="Afghanistan">Afghanistan</option> 
