@@ -227,7 +227,7 @@
 
     <table id="meta" style="width: 100%;  border-collapse: collapse;">
         <tr style="border: 1px solid black">
-            <td rowspan="5" style="border: 1px solid white;  text-align: left; width: 60%">
+            <td rowspan="6" style="border: 1px solid white;  text-align: left; width: 60%">
                 <strong style="font-size: 15px"><?php echo $lang['inv-shipping5'] ?></strong> <br>
                 <!-- <table id="items"> -->
                 <?php echo $receiver_data->fname . " " . $receiver_data->lname; ?><br> <br>
@@ -248,6 +248,18 @@
                 <p style="color:white;"><?php echo $lang['inv-shipping7'] ?></p>
             </td>
             <td style="border: 2px"><?php echo $courier_com->name_com; ?></td>
+        </tr>
+        <tr>
+            <td class="meta-head">
+                <p style="color:white;">Shipment Location</p>
+            </td>
+            <td><?php echo $address_order->frum; ?></td>
+        </tr>
+        <tr>
+            <td class="meta-head">
+                <p style="color:white;">Shipment Destination</p>
+            </td>
+            <td><?php echo $address_order->too; ?></td>
         </tr>
         <tr>
             <td style="border-bottom:  2px" class="meta-head">
@@ -272,11 +284,11 @@
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="5%"><b><?php echo $lang['left214'] ?></b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="25%"><b><?php echo $lang['left213'] ?></b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="20%"><b>Category</b></th>
-            <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b><?php echo $lang['left215'] ?></b></th>
+            <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b>Weight (kg)</b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b><?php echo $lang['left216'] ?></b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b><?php echo $lang['left217'] ?></b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b><?php echo $lang['left218'] ?></b></th>
-            <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b>Weight vol. (lb)</b></th>
+            <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b>Weight vol. (kg)</b></th>
             <th style="color:white;  border: 1px solid black; padding: 2px;" width="10%"><b>Declared value</b></th>
         </tr>
 
