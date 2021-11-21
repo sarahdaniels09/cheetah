@@ -452,6 +452,18 @@ $address_order = $db->registro();
             </tr>
             <tr>
                 <td class="meta-head">
+                    <p style="color:white;">Shipment Location</p>
+                </td>
+                <td><?php echo $address_order->frum; ?></td>
+            </tr>
+            <tr>
+                <td class="meta-head">
+                    <p style="color:white;">Shipment Destination</p>
+                </td>
+                <td><?php echo $address_order->too; ?></td>
+            </tr>
+            <tr>
+                <td class="meta-head">
                     <p style="color:white;"><?php echo $lang['inv-shipping8'] ?></p>
                 </td>
                 <td><?php echo $fecha; ?></td>
@@ -469,11 +481,11 @@ $address_order = $db->registro();
             <th style="color:white;" width="5%"><b><?php echo $lang['left214'] ?></b></th>
             <th style="color:white;" width="30%"><b><?php echo $lang['left213'] ?></b></th>
             <th style="color:white;" width="25%"><b>Category</b></th>
-            <th style="color:white;" width="10%"><b><?php echo $lang['left215'] ?></b></th>
+            <th style="color:white;" width="10%"><b>Weight (kg)</b></th>
             <th style="color:white;" width="10%"><b><?php echo $lang['left216'] ?></b></th>
             <th style="color:white;" width="10%"><b><?php echo $lang['left217'] ?></b></th>
             <th style="color:white;" width="10%"><b><?php echo $lang['left218'] ?></b></th>
-            <th style="color:white;" width="10%"><b>Weight vol. (lb)</b></th>
+            <th style="color:white;" width="10%"><b>Weight vol. (kg)</b></th>
             <th style="color:white;" width="10%"><b>Declared value</b></th>
         </tr>
 
