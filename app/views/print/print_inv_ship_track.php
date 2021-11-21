@@ -426,7 +426,7 @@ $address_order = $db->registro();
 
         <table id="meta">
             <tr>
-                <td rowspan="5" style="border: 1px solid white; border-right: 1px solid black; text-align: left" width="62%">
+                <td rowspan="6" style="border: 1px solid white; border-right: 1px solid black; text-align: left" width="62%">
                     <strong><?php echo $lang['inv-shipping5'] ?></strong> </br>
                     <table id="items">
                         <b><?php echo $receiver_data->fname . " " . $receiver_data->lname; ?></b></br> </br>
